@@ -1,0 +1,4021 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+@font-face {
+  font-family: "poppinRegular";
+  src: url("/src/assets/fonts/Poppins-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "poppinMedium";
+  src: url("/src/assets/fonts/Poppins-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "poppinSemiBold";
+  src: url("/src/assets/fonts/Poppins-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "poppinBold";
+  src: url("/src/assets/fonts/Poppins-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "poppinExtraBold";
+  src: url("/src/assets/fonts/Poppins-ExtraBold.ttf") format("truetype");
+}
+.loadingMain {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999999999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  font-family: "poppinRegular";
+}
+.App header .header {
+  background: linear-gradient(to right, #1e1729, #e92b2b);
+  color: #fff;
+}
+.App header .header .headerInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0 5px 0;
+}
+.App header .header .headerInner .headerFirst {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.App header .header .headerInner .headerFirst .iconOutter {
+  border: 1px solid white;
+  border-radius: 50%;
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+  padding: 5px 8px 5px 8px;
+}
+.App header .header .headerInner .headerFirst .iconOutter:hover {
+  background-color: #e92b2b;
+}
+.App header .header .headerInner .headerSecond {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+.App header .header .headerInner .headerThird {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-size: 12px;
+}
+.App header .header .headerInner .headerThird a {
+  color: white;
+  text-decoration: none;
+}
+.App header .header .headerInner .userProfileDiv .dropdown button {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+.App header .mainHeader .headerContainer {
+  position: relative;
+}
+.App header .mainHeader .headerContainer .headerInner {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px 15px 50px;
+  background-color: rgba(255, 255, 255, 0.904);
+  border-radius: 0 0 40px 40px;
+  width: 100%;
+}
+.App header .mainHeader .headerContainer .headerInner .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+.App header .mainHeader .headerContainer .headerInner .menu .menuInner {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.App header .mainHeader .headerContainer .headerInner .menu .menuInner a {
+  color: black;
+  text-decoration: none;
+}
+.App header .mainHeader .headerContainer .headerInner .menu .shoppingButton {
+  background-color: #e92b2b;
+  padding: 9px 11px 9px 11px;
+  font-size: 14px;
+  border-radius: 50%;
+}
+.App header .mainHeader .headerContainer .headerInner .menu .shoppingButton a {
+  color: white;
+  text-decoration: none;
+}
+.App header .mobileHeader {
+  display: none;
+}
+.App header .mobileHeader .userProfileDiv .dropdown .btn-secondary {
+  background-color: #e92b2b;
+  border: none;
+}
+.App .footer {
+  background-color: #1e1428;
+}
+.App .footer hr {
+  color: white;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.App .footer .footerForm {
+  color: white;
+  font-size: 11px;
+  padding: 10px 50px 10px 50px;
+  background-color: rgba(0, 0, 0, 0.24);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.App .footer .footerForm .footerFormWrapper .para1 {
+  font-family: "poppinBold";
+  font-size: 20px;
+}
+.App .footer .footerForm .footerFormWrapper .para1 span {
+  color: #e92b2b;
+}
+.App .footer .footerForm .footerInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App .footer .footerForm .footerInput .footerBorder {
+  border-bottom: 1px solid white;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.App .footer .footerForm .footerInput .footerBorder input {
+  width: 90%;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+  padding: 10px;
+}
+.App .footer .footerForm .footerInput .footerBorder button {
+  width: 10%;
+  background-color: rgba(0, 0, 0, 0);
+  color: #e92b2b;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.App .footer .footerMain {
+  color: white;
+  margin-bottom: 20px;
+}
+.App .footer .footerMain h5 {
+  font-family: "poppinBold";
+  position: relative;
+  margin-bottom: 30px;
+}
+.App .footer .footerMain h5::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  height: 4px;
+  background-color: #e92b2b;
+  width: 80px;
+}
+.App .footer .footerMain p {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.App .footer .footerMain a {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 10px;
+}
+.App .footer .footerMain .linkFlex {
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+}
+.App .footer .footerHeader {
+  margin-bottom: 30px;
+}
+.App .footer .footerHeader .footerImg {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.App .footer .footerHeader .list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.App .footer .footerHeader .list a {
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+}
+.App .footer .footerHeader .icons {
+  display: flex;
+  justify-content: center;
+}
+.App .footer .footerHeader .icons a {
+  border: 1px solid white;
+  border-radius: 50%;
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+  padding: 5px 8px 5px 8px;
+  margin-right: 15px;
+}
+.App .footer .footerHeader .icons a:hover {
+  background-color: #e92b2b;
+}
+.App .footer2 {
+  background-color: #e92b2b;
+}
+.App .footer2 .footer2Main {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 10px;
+  align-items: center;
+}
+.App .footer2 .footer2Main .footer2Link a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.App main .homePage .homePageInner {
+  overflow-x: hidden;
+}
+.App main .homePage .homePageInner .banner .bannerInner .bannerText {
+  background-image: url(assets/images/homepage/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 70px 70px;
+  border-bottom: 8px solid #e92b2b;
+  padding: 120px 0 0 0;
+}
+.App main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo {
+  display: flex;
+  width: 100%;
+}
+.App main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .doctorImage {
+  width: 40%;
+  height: 100%;
+}
+.App main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .doctorImage img {
+  width: 400px;
+  height: 400px;
+}
+.App main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara {
+  width: 60%;
+  height: 100%;
+}
+.App main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .succButton {
+  display: flex;
+  background-color: rgba(233, 43, 43, 0.0745098039);
+  width: 130px;
+  padding: 10px;
+  font-size: 12px;
+  gap: 10px;
+}
+.App main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .succButton i {
+  color: #e92b2b;
+}
+.App main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .Primary {
+  font-family: "poppinSemiBold";
+  color: #e92b2b;
+  font-size: 65px;
+  line-height: 1.5;
+}
+.App main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .Health {
+  font-family: "poppinBold";
+  font-size: 70px;
+  line-height: 1;
+}
+.App main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .Health span {
+  color: #e92b2b;
+}
+.App main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .Service {
+  font-family: "poppinRegular";
+  color: #e92b2b;
+  font-size: 60px;
+  line-height: 1;
+}
+.App main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .Service span {
+  color: black;
+}
+.App main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .Home {
+  font-size: 60px;
+  font-family: "poppinMedium";
+  line-height: 1;
+}
+.App main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .bookButton {
+  margin-top: 20px;
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.App main .homePage .homePageInner .serviceContainer {
+  position: relative;
+}
+.App main .homePage .homePageInner .serviceContainer .servicesmainHeading {
+  font-family: "poppinExtraBold";
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 35%;
+  transition: all 1s ease-in-out;
+}
+.App main .homePage .homePageInner .serviceContainer .servicesmainHeading span {
+  color: #e92b2b;
+}
+.App main .homePage .homePageInner .serviceContainer .activeHeading {
+  top: -100px;
+}
+.App main .homePage .homePageInner .servicesMain {
+  margin-top: 150px;
+  position: relative;
+  left: 150%;
+  transition: all 1s ease-in-out;
+}
+.App main .homePage .homePageInner .servicesMain .redCard {
+  background-color: #ec2b31;
+  border: none;
+}
+.App main .homePage .homePageInner .servicesMain .redCard .serviceBody .cardImage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.App main .homePage .homePageInner .servicesMain .redCard .serviceBody .cardImage img {
+  width: 70%;
+}
+.App main .homePage .homePageInner .servicesMain .redCard .serviceBody .para {
+  margin-bottom: 10px;
+}
+.App main .homePage .homePageInner .servicesMain .redCard .serviceBody .para .cardHeading {
+  color: white;
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
+  font-family: "poppinExtraBold";
+}
+.App main .homePage .homePageInner .servicesMain .redCard .serviceBody .para .cardPara {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+}
+.App main .homePage .homePageInner .servicesMain .redCard .serviceBody .cardButton {
+  display: flex;
+  justify-content: center;
+}
+.App main .homePage .homePageInner .servicesMain .redCard .serviceBody .cardButton a {
+  display: block;
+  width: 150px;
+  background-color: #1e1729;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.App main .homePage .homePageInner .servicesMain .blackCard {
+  background-color: #1e1428;
+  border: none;
+}
+.App main .homePage .homePageInner .servicesMain .blackCard .serviceBody .cardImage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .homePage .homePageInner .servicesMain .blackCard .serviceBody .cardImage img {
+  width: 70%;
+}
+.App main .homePage .homePageInner .servicesMain .blackCard .serviceBody .para {
+  margin-bottom: 10px;
+}
+.App main .homePage .homePageInner .servicesMain .blackCard .serviceBody .para .cardHeading {
+  color: white;
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
+  font-family: "poppinExtraBold";
+}
+.App main .homePage .homePageInner .servicesMain .blackCard .serviceBody .para .cardPara {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+}
+.App main .homePage .homePageInner .servicesMain .blackCard .serviceBody .cardButton {
+  display: flex;
+  justify-content: center;
+}
+.App main .homePage .homePageInner .servicesMain .blackCard .serviceBody .cardButton a {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.App main .homePage .homePageInner .active {
+  left: 0;
+}
+.App main .homePage .homePageInner .aboutUs {
+  background-color: #fffff9;
+  margin-top: 50px;
+  padding-top: 50px;
+}
+.App main .homePage .homePageInner .aboutUs .aboutPicOutter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.App main .homePage .homePageInner .aboutUs .aboutPicOutter img {
+  width: 70%;
+}
+.App main .homePage .homePageInner .aboutUs .aboutPicOutter .newsImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .homePage .homePageInner .aboutUs .aboutPicOutter .newsImage img {
+  width: 250px;
+}
+.App main .homePage .homePageInner .aboutPara {
+  padding-right: 80px;
+  margin-bottom: 40px;
+}
+.App main .homePage .homePageInner .aboutPara .heading {
+  font-size: 50px;
+  display: flex;
+  gap: 5px;
+}
+.App main .homePage .homePageInner .aboutPara .heading .colored {
+  color: #e92b2b;
+  font-family: "poppinExtraBold";
+}
+.App main .homePage .homePageInner .aboutPara .heading1 {
+  font-size: 50px;
+}
+.App main .homePage .homePageInner .aboutPara .heading1 span {
+  color: #e92b2b;
+  font-family: "poppinExtraBold";
+}
+.App main .homePage .homePageInner .aboutPara .heading2 {
+  font-family: "poppinSemiBold";
+  margin-bottom: 10px;
+}
+.App main .homePage .homePageInner .aboutPara .heading2 span {
+  color: #e92b2b;
+}
+.App main .homePage .homePageInner .aboutPara .newsCard .card {
+  border: none;
+  box-shadow: 0px 0 20px 1px rgba(1, 41, 112, 0.1);
+}
+.App main .homePage .homePageInner .aboutPara .newsCard .card .serviceBody .para .cardHeading {
+  font-family: "poppinBold";
+  margin-bottom: 10px;
+}
+.App main .homePage .homePageInner .aboutPara .newsCard .card .serviceBody .para .cardPara {
+  font-family: "poppinSemiBold";
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.App main .homePage .homePageInner .aboutPara .newsCard .card .serviceBody .userReviewOuter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.App main .homePage .homePageInner .aboutPara .newsCard .card .serviceBody .userReviewOuter .userReview {
+  width: 80%;
+}
+.App main .homePage .homePageInner .aboutPara .newsCard .card .serviceBody .userReviewOuter .userReview .cardHeading {
+  font-family: "poppinBold";
+}
+.App main .homePage .homePageInner .aboutPara .newsCard .card .serviceBody .userReviewOuter .userReview .cardPara {
+  font-family: "poppinRegular";
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #e92b2b;
+}
+.App main .homePage .homePageInner .aboutPara .newsCard .card .serviceBody .userReviewOuter .rightSide {
+  width: 20%;
+  position: relative;
+}
+.App main .homePage .homePageInner .aboutPara .newsCard .card .serviceBody .userReviewOuter .rightSide a {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  bottom: -45px;
+  width: 135px;
+  right: -10px;
+  border-radius: 10px;
+  position: absolute;
+}
+.App main .homePage .homePageInner .aboutPara .paragraph {
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+.App main .homePage .homePageInner .aboutPara .aboutButton a {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 155px;
+}
+.App main .homePage .homePageInner .employeeSection {
+  background-image: url(assets/images/homepage/employeeBackgroundImg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 300px;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeAbout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 60px;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeAbout .employeeText {
+  padding-bottom: 60px;
+  color: white;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeAbout .employeeText .heading {
+  font-family: "poppinBold";
+  font-size: 40px;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeAbout .employeeText p {
+  font-size: 12px;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeAbout .employeeContactButton a {
+  display: block;
+  width: 150px;
+  background-color: #1e1729;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 160px;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeBubbleDiv .bubbleOuter {
+  display: flex;
+  justify-content: center;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeBubbleDiv .bubbleOuter .bubble {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50%;
+  padding: 30px 0px;
+  width: 190px;
+  text-align: center;
+  box-shadow: 0px 0 40px 1px rgba(1, 41, 112, 0.1);
+  background-color: white;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeBubbleDiv .bubbleOuter .bubble:hover {
+  background: linear-gradient(to top, #e92b2b, #1e1729);
+  color: white;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeBubbleDiv .bubbleOuter .bubble .heading {
+  font-family: "poppinExtraBold";
+  font-size: 25px;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeBubbleDiv .bubbleOuter .bubble p {
+  font-size: 14px;
+  font-family: "poppinSemiBold";
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeBubbleDiv .bubbleOuter .bubble .bubbleImage i {
+  color: black;
+  font-size: 30px;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeBubbleDiv .bubbleOuter .bubble .bubbleImage img {
+  width: 40px;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeBubbleDiv .bubbleOuter .bubble .bubbleImage1 img {
+  width: 30px;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeBubbleDiv .bubbleOuter .bubble .bubbleImage2 {
+  padding: 6px;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeBubbleDiv .bubbleOuter .bubble .bubbleImage2 img {
+  width: 39px;
+}
+.App main .homePage .homePageInner .newsCarousel {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.App main .homePage .homePageInner .newsCarousel .CarouselHeading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.App main .homePage .homePageInner .newsCarousel .CarouselHeading p {
+  font-size: 50px;
+}
+.App main .homePage .homePageInner .newsCarousel .CarouselHeading p span {
+  color: #e92b2b;
+  font-family: "poppinExtraBold";
+}
+.App main .homePage .homePageInner .newsCarousel .carouselDiv .carouselInner .carouselItem {
+  justify-content: center;
+  display: flex !important;
+  align-items: center;
+}
+.App main .homePage .homePageInner .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner {
+  justify-content: center;
+  display: flex !important;
+  align-items: center;
+}
+.App main .homePage .homePageInner .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner img {
+  filter: grayscale(100%);
+}
+.App main .homePage .homePageInner .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner img:hover {
+  filter: grayscale(0);
+}
+.App main .homePage .homePageInner .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner1 {
+  justify-content: center;
+  display: flex !important;
+  align-items: center;
+}
+.App main .homePage .homePageInner .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner1 img {
+  filter: grayscale(100%);
+}
+.App main .homePage .homePageInner .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner1 img:hover {
+  filter: grayscale(0);
+}
+.App main .homePage .homePageInner .hiringSection {
+  background-image: url(assets/images/homepage/hiringBackground.png);
+  background-repeat: no-repeat;
+  background-size: 100% 300px;
+}
+.App main .homePage .homePageInner .hiringSection .hiringAbout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 60px;
+}
+.App main .homePage .homePageInner .hiringSection .hiringAbout .hiringText {
+  padding-bottom: 60px;
+  color: white;
+}
+.App main .homePage .homePageInner .hiringSection .hiringAbout .hiringText .heading {
+  font-family: "poppinBold";
+  font-size: 40px;
+}
+.App main .homePage .homePageInner .hiringSection .hiringAbout .hiringText p {
+  font-size: 12px;
+}
+.App main .homePage .homePageInner .hiringSection .hiringAbout .hiringContactButton a {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 160px;
+}
+.App main .bookDoctor {
+  margin-bottom: 50px;
+}
+.App main .bookDoctor .bookDoctorBanner .banner .bannerText {
+  background-image: url(assets/images/BookDoctor/Bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 70px 70px;
+  border-bottom: 8px solid #e92b2b;
+  padding: 170px 0 0 0;
+}
+.App main .bookDoctor .bookDoctorBanner .banner .bannerText .bannerInfo {
+  height: 150px;
+  text-align: center;
+}
+.App main .bookDoctor .bookDoctorBanner .banner .bannerText .bannerInfo p {
+  font-family: "poppinExtraBold";
+  font-size: 50px;
+}
+.App main .bookDoctor .bookDoctorBanner .banner .bannerText .bannerInfo p span {
+  color: #e92b2b;
+}
+.App main .bookDoctor .switchDiv {
+  display: none;
+}
+.App main .bookDoctor .switchDiv .mainBody {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyHeading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyHeading h1 {
+  font-family: "poppinMedium";
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyHeading h1 span {
+  font-family: "poppinExtraBold";
+  color: #e92b2b;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .radioButton {
+  margin-bottom: 30px;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .radioButton input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: none;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .radio-button {
+  border: 1px solid #e92b2b;
+  width: 200px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  gap: 20px;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button {
+  background-color: #e92b2b;
+  color: #fff;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button img {
+  filter: brightness(1000%);
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button .selectDoc {
+  filter: brightness(100%);
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button span {
+  color: white;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .imgDiv {
+  position: relative;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .imgDiv img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .imgDiv .verify {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  right: 0;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .info .docName {
+  font-size: 18px;
+  font-family: "poppinSemiBold";
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .info .docPara {
+  font-size: 12px;
+  font-family: "poppinMedium";
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .info .docPara span {
+  color: #e92b2b;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .selectDateTimeLabel {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+  font-family: "poppinSemiBold";
+  margin-bottom: 10px;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .selectDateTimeInput {
+  border: 2px solid #e92b2b;
+  border-radius: 30px;
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 20px;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime p {
+  border: 2px solid #e92b2b;
+  border-radius: 30px;
+  padding: 10px;
+  width: 80%;
+  color: #e92b2b;
+  margin-bottom: 20px;
+  text-align: left;
+  background-color: rgba(233, 43, 43, 0.0901960784);
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime select {
+  border: 2px solid #e92b2b;
+  border-radius: 30px;
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 20px;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker {
+  border-radius: 20px;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker button {
+  margin-top: 10px;
+  color: white;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container {
+  width: 100%;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__header {
+  border-radius: 20px 20px 10px 10px;
+  background-color: #e92b2b;
+  height: 110px;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__current-month {
+  font-size: 20px;
+  color: white;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__day-names {
+  margin-top: 15px;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__day-names .react-datepicker__day-name {
+  color: white;
+  font-size: 20px;
+  width: 3rem;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week {
+  height: 60px;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day {
+  font-size: 20px;
+  width: 3rem;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day--selected {
+  background-color: #e92b2b;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day--keyboard-selected {
+  background-color: #e92b2b;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv .react-time-picker .react-time-picker__wrapper {
+  border: 2px solid #e92b2b;
+  border-radius: 10px;
+  padding: 5px;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv .react-time-picker .react-time-picker__wrapper .react-time-picker__inputGroup {
+  width: 90%;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv .react-time-picker .react-time-picker__wrapper .react-time-picker__inputGroup .react-time-picker__inputGroup__leadingZero {
+  color: black;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv .react-time-picker .react-time-picker__wrapper .react-time-picker__inputGroup .react-time-picker__inputGroup__input {
+  border: 0;
+  border-radius: 0;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .appointmentButton {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+}
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .appointmentButton .done {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 200px;
+}
+.App main .bookDoctor .firstSwitchDiv {
+  display: block;
+}
+.App main .bookDoctor .pagging .wrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  align-items: flex-end;
+}
+.App main .bookDoctor .pagging .wrapper .progressBar {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.App main .bookDoctor .pagging .wrapper .progressBar progress {
+  color: lightblue;
+  width: 150px;
+  height: 4px;
+}
+.App main .bookDoctor .pagging .wrapper .progressBar progress::-moz-progress-bar {
+  background: #e92b2b;
+}
+.App main .bookDoctor .pagging .wrapper .progressBar progress::-webkit-progress-value {
+  background: #e92b2b;
+}
+.App main .bookDoctor .pagging .wrapper .progressBar progress::-webkit-progress-bar {
+  background: rgba(233, 43, 43, 0.2117647059);
+}
+.App main .bookDoctor .pagging .wrapper .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.App main .bookDoctor .pagging .wrapper .buttons button {
+  background-color: #e92b2b;
+  color: white;
+  border-radius: 50%;
+  padding: 8px 11px;
+}
+.App main .bookDoctor .pagging .wrapper .buttons .backButton {
+  background-color: white;
+  color: #e92b2b;
+  border: 1px solid #e92b2b;
+  padding: 7px 10px;
+}
+.App main .bookDoctor .pagging .wrapper .buttons .nextButton:disabled {
+  opacity: 0.25;
+}
+.App main .bookDoctor .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content {
+  width: 100%;
+}
+.App main .bookDoctor .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .header {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  font-family: "poppinMedium";
+  font-size: 30px;
+  position: relative;
+}
+.App main .bookDoctor .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .header button {
+  width: 5px;
+  height: 8px;
+  background-color: white;
+  position: absolute;
+  right: 20px;
+}
+.App main .bookDoctor .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .header span {
+  font-family: "poppinBold";
+  color: #e92b2b;
+}
+.App main .bookDoctor .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .modal-body {
+  display: flex;
+  justify-content: center;
+}
+.App main .bookDoctor .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .modal-body img {
+  width: 200px;
+}
+.App main .bookDoctor .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .ButtonFooter {
+  display: flex;
+  justify-content: center;
+  font-family: "poppinMedium";
+  margin-bottom: 20px;
+}
+.App main .bookDoctor .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .ButtonFooter button {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.App main .bookLab {
+  margin-bottom: 50px;
+}
+.App main .bookLab .bookDoctorBanner .banner .bannerText {
+  background-image: url(assets/images/bookLab/Bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 70px 70px;
+  border-bottom: 8px solid #e92b2b;
+  padding: 170px 0 0 0;
+}
+.App main .bookLab .bookDoctorBanner .banner .bannerText .bannerInfo {
+  height: 150px;
+  text-align: center;
+}
+.App main .bookLab .bookDoctorBanner .banner .bannerText .bannerInfo p {
+  font-family: "poppinExtraBold";
+  font-size: 50px;
+}
+.App main .bookLab .bookDoctorBanner .banner .bannerText .bannerInfo p span {
+  color: #e92b2b;
+}
+.App main .bookLab .switchDiv {
+  display: none;
+}
+.App main .bookLab .switchDiv .mainBody {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyHeading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyHeading h1 {
+  font-family: "poppinMedium";
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyHeading h1 span {
+  font-family: "poppinExtraBold";
+  color: #e92b2b;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .LabCarousel .LabCarouselInner {
+  margin-bottom: 50px;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .LabCarousel .LabCarouselInner .carouselItem .carouselItemInner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .LabCarousel .LabCarouselInner .carouselItem .carouselItemInner .imgOuter {
+  width: 150px;
+  height: 80px;
+  cursor: pointer;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .LabCarousel .LabCarouselInner .carouselItem .carouselItemInner .imgOuter img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .LabCarousel .LabCarouselInner .carouselItem .carouselItemInner input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: none;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .LabCarousel .LabCarouselInner .carouselItem .carouselItemInner input[type=radio]:checked + label.imgOuter {
+  border: 4px solid #e92b2b;
+  padding: 5px;
+  border-radius: 10px;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton {
+  margin-bottom: 30px;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .list-group {
+  width: 50%;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .list-group .list-group-item p {
+  display: flex;
+  justify-content: space-between;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .list-group .list-group-item p button {
+  background-color: #e92b2b;
+  color: white;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 3px 8px 3px 8px;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton #selectLocation {
+  border: 2px solid #e92b2b;
+  border-radius: 30px;
+  padding: 10px;
+  width: 40%;
+  color: #e92b2b;
+  margin-bottom: 20px;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .chooseLabClass {
+  display: flex;
+  margin-bottom: 10px;
+  width: 50%;
+  font-family: "poppinSemiBold";
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .chooseLocationClass {
+  display: flex;
+  margin-bottom: 10px;
+  width: 38%;
+  font-family: "poppinSemiBold";
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton #chooseLab {
+  border: 2px solid #e92b2b;
+  border-radius: 30px;
+  padding: 10px;
+  width: 90%;
+  color: #e92b2b;
+  margin-bottom: 20px;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton #chooseTest {
+  border: 2px solid #e92b2b;
+  border-radius: 30px;
+  padding: 10px;
+  color: #e92b2b;
+  width: 50%;
+  margin-bottom: 20px;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: none;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .radio-button {
+  border: 1px solid #e92b2b;
+  width: 200px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  gap: 20px;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button {
+  background-color: #e92b2b;
+  color: #fff;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button img {
+  filter: brightness(1000%);
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button .selectDoc {
+  filter: brightness(100%);
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button span {
+  color: white;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .imgDiv {
+  position: relative;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .imgDiv img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .imgDiv .verify {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  right: 0;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .info .docName {
+  font-size: 18px;
+  font-family: "poppinSemiBold";
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .info .docPara {
+  font-size: 12px;
+  font-family: "poppinMedium";
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .info .docPara span {
+  color: #e92b2b;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime label {
+  display: flex;
+  margin-bottom: 10px;
+  font-family: "poppinSemiBold";
+  width: 80%;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker {
+  border-radius: 20px;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker button {
+  margin-top: 10px;
+  color: white;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container {
+  width: 100%;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__header {
+  border-radius: 20px 20px 10px 10px;
+  background-color: #e92b2b;
+  height: 110px;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__current-month {
+  font-size: 20px;
+  color: white;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__day-names {
+  margin-top: 15px;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__day-names .react-datepicker__day-name {
+  color: white;
+  font-size: 20px;
+  width: 3rem;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week {
+  height: 60px;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day {
+  font-size: 20px;
+  width: 3rem;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day--selected {
+  background-color: #e92b2b;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day--keyboard-selected {
+  background-color: #e92b2b;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv .react-time-picker .react-time-picker__wrapper {
+  border: 2px solid #e92b2b;
+  border-radius: 10px;
+  padding: 5px;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv .react-time-picker .react-time-picker__wrapper .react-time-picker__inputGroup {
+  width: 90%;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv .react-time-picker .react-time-picker__wrapper .react-time-picker__inputGroup .react-time-picker__inputGroup__leadingZero {
+  color: black;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv .react-time-picker .react-time-picker__wrapper .react-time-picker__inputGroup .react-time-picker__inputGroup__input {
+  border: 0;
+  border-radius: 0;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime #modal2 .modal-dialog .modal-content .header {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  font-family: "poppinMedium";
+  font-size: 30px;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime #modal2 .modal-dialog .modal-content .header span {
+  font-family: "poppinBold";
+  color: #e92b2b;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime #modal2 .modal-dialog .modal-content .modal-body {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-align: left;
+  flex-direction: column;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime #modal2 .modal-dialog .modal-content .modal-body label {
+  width: 80%;
+  margin-bottom: 10px;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime #modal2 .modal-dialog .modal-content .modal-body select {
+  color: #e92b2b;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .viewTest {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 80%;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .selectDateTimeInput {
+  border: 2px solid #e92b2b;
+  border-radius: 30px;
+  padding: 10px;
+  width: 90%;
+  margin-bottom: 20px;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime p {
+  border: 2px solid #e92b2b;
+  border-radius: 30px;
+  padding: 10px;
+  width: 90%;
+  color: #e92b2b;
+  margin-bottom: 20px;
+  text-align: left;
+  background-color: rgba(233, 43, 43, 0.0901960784);
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .TimePickerDiv {
+  border: 2px solid #e92b2b;
+  border-radius: 30px;
+  padding: 10px;
+  width: 90%;
+  color: #e92b2b;
+  margin-bottom: 20px;
+  text-align: left;
+  background-color: rgba(233, 43, 43, 0.0901960784);
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .TimePickerDiv .react-time-picker .react-time-picker__wrapper {
+  border: 0;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .TimePickerDiv .react-time-picker .react-time-picker__wrapper .react-time-picker__inputGroup {
+  width: 90%;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .TimePickerDiv .react-time-picker .react-time-picker__wrapper .react-time-picker__inputGroup .react-time-picker__inputGroup__leadingZero {
+  color: black;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .TimePickerDiv .react-time-picker .react-time-picker__wrapper .react-time-picker__inputGroup .react-time-picker__inputGroup__input {
+  border: 0;
+  border-radius: 0;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .TimePickerDiv .react-time-picker .react-time-picker__clock {
+  inset: auto auto -800% 0px !important;
+  border: none;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime select {
+  border: 2px solid #e92b2b;
+  border-radius: 30px;
+  padding: 10px;
+  width: 90%;
+  margin-bottom: 20px;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .appointmentButton {
+  margin-top: 20px;
+  margin-left: 5%;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .appointmentButton .checkup {
+  display: block;
+  width: 200px;
+  border: 1px solid black;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  border-radius: 25px;
+  padding: 10px 30px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .appointmentButton .done {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 200px;
+}
+.App main .bookLab .switchDiv .pagging .wrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  align-items: flex-end;
+}
+.App main .bookLab .switchDiv .pagging .wrapper .progressBar {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.App main .bookLab .switchDiv .pagging .wrapper .progressBar progress {
+  color: lightblue;
+  width: 150px;
+  height: 4px;
+}
+.App main .bookLab .switchDiv .pagging .wrapper .progressBar progress::-moz-progress-bar {
+  background: #e92b2b;
+}
+.App main .bookLab .switchDiv .pagging .wrapper .progressBar progress::-webkit-progress-value {
+  background: #e92b2b;
+}
+.App main .bookLab .switchDiv .pagging .wrapper .progressBar progress::-webkit-progress-bar {
+  background: rgba(233, 43, 43, 0.2117647059);
+}
+.App main .bookLab .switchDiv .pagging .wrapper .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.App main .bookLab .switchDiv .pagging .wrapper .buttons button {
+  background-color: #e92b2b;
+  color: white;
+  border-radius: 50%;
+  padding: 8px 11px;
+}
+.App main .bookLab .switchDiv .pagging .wrapper .buttons .backButton {
+  background-color: white;
+  color: #e92b2b;
+  border: 1px solid #e92b2b;
+  padding: 7px 10px;
+}
+.App main .bookLab .switchDiv .pagging .wrapper .buttons .nextButton:disabled {
+  opacity: 0.25;
+}
+.App main .bookLab .switchDiv .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content {
+  width: 100%;
+}
+.App main .bookLab .switchDiv .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .header {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  font-family: "poppinMedium";
+  font-size: 30px;
+  position: relative;
+}
+.App main .bookLab .switchDiv .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .header button {
+  width: 5px;
+  height: 8px;
+  background-color: white;
+  position: absolute;
+  right: 20px;
+}
+.App main .bookLab .switchDiv .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .header span {
+  font-family: "poppinBold";
+  color: #e92b2b;
+}
+.App main .bookLab .switchDiv .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .modal-body {
+  display: flex;
+  justify-content: center;
+}
+.App main .bookLab .switchDiv .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .modal-body img {
+  width: 200px;
+}
+.App main .bookLab .switchDiv .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .ButtonFooter {
+  display: flex;
+  justify-content: center;
+  font-family: "poppinMedium";
+  margin-bottom: 20px;
+}
+.App main .bookLab .switchDiv .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .ButtonFooter button {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.App main .bookLab .firstSwitchDiv {
+  display: block;
+}
+.App main .pharmacy {
+  margin-bottom: 50px;
+}
+.App main .pharmacy .pharmacyBanner .banner .bannerText {
+  background-image: url(assets/images/Pharmacy/Bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 70px 70px;
+  border-bottom: 8px solid #e92b2b;
+  padding: 170px 0 0 0;
+}
+.App main .pharmacy .pharmacyBanner .banner .bannerText .bannerInfo {
+  height: 150px;
+  text-align: center;
+}
+.App main .pharmacy .pharmacyBanner .banner .bannerText .bannerInfo p {
+  font-family: "poppinExtraBold";
+  font-size: 50px;
+}
+.App main .pharmacy .pharmacyBanner .banner .bannerText .bannerInfo p span {
+  color: #e92b2b;
+}
+.App main .pharmacy .switchDiv .mainBody {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyHeading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyHeading h1 {
+  font-family: "poppinMedium";
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyHeading h1 span {
+  font-family: "poppinExtraBold";
+  color: #e92b2b;
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyInner .wrapper .radioButton {
+  margin-bottom: 30px;
+  color: black;
+  text-decoration: none;
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .list-group {
+  width: 50%;
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .list-group .list-group-item p {
+  display: flex;
+  justify-content: space-between;
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .list-group .list-group-item p button {
+  background-color: #e92b2b;
+  color: white;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 3px 8px 3px 8px;
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyInner .wrapper .radioButton #selectLocation {
+  border: 2px solid #e92b2b;
+  border-radius: 30px;
+  padding: 10px;
+  width: 40%;
+  color: #e92b2b;
+  margin-bottom: 20px;
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .chooseLabClass {
+  display: flex;
+  margin-bottom: 10px;
+  width: 50%;
+  font-family: "poppinSemiBold";
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .chooseLocationClass {
+  display: flex;
+  margin-bottom: 10px;
+  width: 38%;
+  font-family: "poppinSemiBold";
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyInner .wrapper .radioButton #chooseLab {
+  border: 2px solid #e92b2b;
+  border-radius: 30px;
+  padding: 10px;
+  width: 90%;
+  color: #e92b2b;
+  margin-bottom: 20px;
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyInner .wrapper .radioButton #chooseTest {
+  border: 2px solid #e92b2b;
+  border-radius: 30px;
+  padding: 10px;
+  color: #e92b2b;
+  width: 50%;
+  margin-bottom: 20px;
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyInner .wrapper .radioButton input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: none;
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .radio-button {
+  border: 1px solid #e92b2b;
+  width: 200px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  gap: 20px;
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button {
+  background-color: #e92b2b;
+  color: #fff;
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button img {
+  filter: brightness(1000%);
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button .selectDoc {
+  filter: brightness(100%);
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button span {
+  color: white;
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .imgDiv {
+  position: relative;
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .imgDiv img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .imgDiv .verify {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  right: 0;
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .info .docName {
+  font-size: 18px;
+  font-family: "poppinSemiBold";
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .info .docPara {
+  font-size: 12px;
+  font-family: "poppinMedium";
+}
+.App main .pharmacy .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .info .docPara span {
+  color: #e92b2b;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .mainHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 50px;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .mainHeading hr {
+  width: 50%;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .mainHeading p {
+  font-size: 40px;
+  font-family: "poppinMedium";
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .mainHeading p span {
+  color: #e92b2b;
+  font-family: "poppinBold";
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain hr {
+  opacity: 0.1;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel {
+  margin-top: 50px;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .startHeading {
+  display: flex;
+  justify-content: space-between;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .startHeading p {
+  position: relative;
+  font-family: "poppinSemiBold";
+  font-size: 25px;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .startHeading p::after {
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #e92b2b;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .startHeading .subHeaderIcon {
+  margin-right: 30px;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .startHeading .subHeaderIcon .search-box {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .startHeading .subHeaderIcon .search-box .input-search {
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all 0.5s ease-in-out;
+  background-color: rgba(34, 167, 179, 0);
+  padding-right: 40px;
+  color: #e92b2b;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .startHeading .subHeaderIcon .search-box .input-search::-moz-placeholder {
+  color: rgba(233, 43, 43, 0.768627451);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .startHeading .subHeaderIcon .search-box .input-search::placeholder {
+  color: rgba(233, 43, 43, 0.768627451);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .startHeading .subHeaderIcon .search-box .input-search:focus {
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .startHeading .subHeaderIcon .search-box .btn-search {
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color: #e92b2b;
+  background-color: transparent;
+  pointer-events: painted;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .startHeading .subHeaderIcon .search-box .btn-search:focus ~ .input-search {
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid #e92b2b;
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .carousel {
+  margin-bottom: 15px;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .carousel .carouselItem .inner {
+  text-decoration: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid #e92b2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .carousel .carouselItem .inner span {
+  color: white;
+  font-size: 14px;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .carousel .carouselItem .acidity {
+  background-image: url(assets/images/Pharmacy/acidity.png);
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .carousel .carouselItem .acne {
+  background-image: url(assets/images/Pharmacy/acne.png);
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .carousel .carouselItem .babycare {
+  background-image: url(assets/images/Pharmacy/babycare.png);
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .carousel .carouselItem .baldness {
+  background-image: url(assets/images/Pharmacy/baldness.png);
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .carousel .carouselItem .cancer {
+  background-image: url(assets/images/Pharmacy/cancer.png);
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .carousel .carouselItem .derma {
+  background-image: url(assets/images/Pharmacy/derma.png);
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .carousel .carouselItem .haircare {
+  background-image: url(assets/images/Pharmacy/hairCare.png);
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .carousel .carouselItem .infer {
+  background-image: url(assets/images/Pharmacy/infer.png);
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .carousel .carouselItem .malaria {
+  background-image: url(assets/images/Pharmacy/malaria.png);
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .viewButton {
+  text-align: right;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .categoryCarousel .viewButton a {
+  font-family: "poppinMedium";
+  color: #e92b2b;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .bestSeller {
+  margin-top: 50px;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .bestSeller .startHeading {
+  display: flex;
+  justify-content: space-between;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .bestSeller .startHeading p {
+  position: relative;
+  font-family: "poppinSemiBold";
+  font-size: 25px;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .bestSeller .startHeading p::after {
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #e92b2b;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .bestSeller .startHeading .viewButton {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .bestSeller .startHeading .viewButton a {
+  font-family: "poppinMedium";
+  color: #e92b2b;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .bestSeller .productItems .card {
+  position: relative;
+  border-radius: 20px 20px 20px 20px;
+  text-decoration: none;
+  color: rgb(31, 31, 31);
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .bestSeller .productItems .card img {
+  width: 100%;
+  height: 280px;
+  border-radius: 20px 20px 20px 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .bestSeller .productItems .card .card-body .rating {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .bestSeller .productItems .card .card-body .rating span {
+  color: #f9a037;
+  text-decoration: none;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .bestSeller .productItems .card .card-body .review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .bestSeller .productItems .card .card-body .review p {
+  color: #a1a0a0;
+  font-size: 12px;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .bestSeller .productItems .card .card-body .card-title {
+  font-family: "poppinSemiBold";
+  margin-bottom: 0;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .bestSeller .productItems .card .card-body .card-text {
+  color: #a1a0a0;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .bestSeller .productItems .card .card-body .pricing {
+  display: flex;
+  gap: 10px;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .bestSeller .productItems .card .card-body .pricing .price {
+  font-size: 25px;
+  color: #e92b2b;
+  font-family: "poppinSemiBold";
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .bestSeller .productItems .card .card-body .pricing small {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .bestSeller .productItems .card .card-body .sale {
+  background-color: #e92b2b;
+  color: white;
+  font-size: 12px;
+  border-radius: 20px 0 20px 0;
+  padding: 5px 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .brands {
+  margin-top: 50px;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .brands .startHeading {
+  display: flex;
+  justify-content: space-between;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .brands .startHeading p {
+  position: relative;
+  font-family: "poppinSemiBold";
+  font-size: 25px;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .brands .startHeading p::after {
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #e92b2b;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .brands .startHeading .viewButton {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .brands .startHeading .viewButton a {
+  font-family: "poppinMedium";
+  color: #e92b2b;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .brands .carousel {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 25px;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .brands .carousel .carouselItem .inner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .brands .carousel .carouselItem .inner img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .brands .viewButton {
+  text-align: right;
+}
+.App main .pharmacy .switchDiv .ourProducts .productMain .productBody .brands .viewButton a {
+  font-family: "poppinMedium";
+  color: #e92b2b;
+}
+.App main .pharmacy .switchDiv .bestSeller .productMain .mainHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.App main .pharmacy .switchDiv .bestSeller .productMain .mainHeading hr {
+  width: 50%;
+}
+.App main .pharmacy .switchDiv .bestSeller .productMain .mainHeading p {
+  font-size: 40px;
+  font-family: "poppinMedium";
+}
+.App main .pharmacy .switchDiv .bestSeller .productMain .mainHeading p span {
+  color: #e92b2b;
+  font-family: "poppinBold";
+}
+.App main .pharmacy .switchDiv .bestSeller .productMain .bestSellerBody .productItems .card {
+  position: relative;
+  border-radius: 20px 20px 20px 20px;
+  text-decoration: none;
+  color: rgb(31, 31, 31);
+}
+.App main .pharmacy .switchDiv .bestSeller .productMain .bestSellerBody .productItems .card img {
+  width: 100%;
+  height: 280px;
+  border-radius: 20px 20px 20px 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.App main .pharmacy .switchDiv .bestSeller .productMain .bestSellerBody .productItems .card .card-body .rating {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.App main .pharmacy .switchDiv .bestSeller .productMain .bestSellerBody .productItems .card .card-body .rating span {
+  color: #f9a037;
+  text-decoration: none;
+}
+.App main .pharmacy .switchDiv .bestSeller .productMain .bestSellerBody .productItems .card .card-body .review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .pharmacy .switchDiv .bestSeller .productMain .bestSellerBody .productItems .card .card-body .review p {
+  color: #a1a0a0;
+  font-size: 12px;
+}
+.App main .pharmacy .switchDiv .bestSeller .productMain .bestSellerBody .productItems .card .card-body .card-title {
+  font-family: "poppinSemiBold";
+  margin-bottom: 0;
+}
+.App main .pharmacy .switchDiv .bestSeller .productMain .bestSellerBody .productItems .card .card-body .card-text {
+  color: #a1a0a0;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.App main .pharmacy .switchDiv .bestSeller .productMain .bestSellerBody .productItems .card .card-body .pricing {
+  display: flex;
+  gap: 10px;
+}
+.App main .pharmacy .switchDiv .bestSeller .productMain .bestSellerBody .productItems .card .card-body .pricing .price {
+  font-size: 25px;
+  color: #e92b2b;
+  font-family: "poppinSemiBold";
+}
+.App main .pharmacy .switchDiv .bestSeller .productMain .bestSellerBody .productItems .card .card-body .pricing small {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.App main .pharmacy .switchDiv .bestSeller .productMain .bestSellerBody .productItems .card .card-body .sale {
+  background-color: #e92b2b;
+  color: white;
+  font-size: 12px;
+  border-radius: 20px 0 20px 0;
+  padding: 5px 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.App main .pharmacy .switchDiv .frequentlyBought .productMain .mainHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.App main .pharmacy .switchDiv .frequentlyBought .productMain .mainHeading hr {
+  width: 50%;
+}
+.App main .pharmacy .switchDiv .frequentlyBought .productMain .mainHeading p {
+  font-size: 40px;
+  font-family: "poppinMedium";
+}
+.App main .pharmacy .switchDiv .frequentlyBought .productMain .mainHeading p span {
+  color: #e92b2b;
+  font-family: "poppinBold";
+}
+.App main .pharmacy .switchDiv .frequentlyBought .productMain .bestSellerBody .productItems .card {
+  position: relative;
+  border-radius: 20px 20px 20px 20px;
+  text-decoration: none;
+  color: rgb(31, 31, 31);
+}
+.App main .pharmacy .switchDiv .frequentlyBought .productMain .bestSellerBody .productItems .card img {
+  width: 100%;
+  height: 280px;
+  border-radius: 20px 20px 20px 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.App main .pharmacy .switchDiv .frequentlyBought .productMain .bestSellerBody .productItems .card .card-body .rating {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.App main .pharmacy .switchDiv .frequentlyBought .productMain .bestSellerBody .productItems .card .card-body .rating span {
+  color: #f9a037;
+  text-decoration: none;
+}
+.App main .pharmacy .switchDiv .frequentlyBought .productMain .bestSellerBody .productItems .card .card-body .review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .pharmacy .switchDiv .frequentlyBought .productMain .bestSellerBody .productItems .card .card-body .review p {
+  color: #a1a0a0;
+  font-size: 12px;
+}
+.App main .pharmacy .switchDiv .frequentlyBought .productMain .bestSellerBody .productItems .card .card-body .card-title {
+  font-family: "poppinSemiBold";
+  margin-bottom: 0;
+}
+.App main .pharmacy .switchDiv .frequentlyBought .productMain .bestSellerBody .productItems .card .card-body .card-text {
+  color: #a1a0a0;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.App main .pharmacy .switchDiv .frequentlyBought .productMain .bestSellerBody .productItems .card .card-body .pricing {
+  display: flex;
+  gap: 10px;
+}
+.App main .pharmacy .switchDiv .frequentlyBought .productMain .bestSellerBody .productItems .card .card-body .pricing .price {
+  font-size: 25px;
+  color: #e92b2b;
+  font-family: "poppinSemiBold";
+}
+.App main .pharmacy .switchDiv .frequentlyBought .productMain .bestSellerBody .productItems .card .card-body .pricing small {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.App main .pharmacy .switchDiv .frequentlyBought .productMain .bestSellerBody .productItems .card .card-body .sale {
+  background-color: #e92b2b;
+  color: white;
+  font-size: 12px;
+  border-radius: 20px 0 20px 0;
+  padding: 5px 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .mainHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .mainHeading hr {
+  width: 50%;
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .mainHeading p {
+  font-size: 40px;
+  font-family: "poppinMedium";
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .mainHeading p span {
+  color: #e92b2b;
+  font-family: "poppinBold";
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .categoryCarousel {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .categoryCarousel .startHeading {
+  display: flex;
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .categoryCarousel .startHeading p {
+  position: relative;
+  font-family: "poppinSemiBold";
+  font-size: 25px;
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .categoryCarousel .startHeading p::after {
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #e92b2b;
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .categoryCarousel .carousel {
+  margin-bottom: 15px;
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .categoryCarousel .carousel .carouselItem .inner {
+  text-decoration: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #e92b2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .categoryCarousel .carousel .carouselItem .inner span {
+  color: #e92b2b;
+  font-size: 14px;
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .categoryCarousel .viewButton {
+  text-align: right;
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .categoryCarousel .viewButton a {
+  font-family: "poppinMedium";
+  color: #e92b2b;
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .bestSellerBody .productItems .card {
+  position: relative;
+  border-radius: 20px 20px 20px 20px;
+  text-decoration: none;
+  color: rgb(31, 31, 31);
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .bestSellerBody .productItems .card img {
+  width: 100%;
+  height: 280px;
+  border-radius: 20px 20px 20px 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .bestSellerBody .productItems .card .card-body .rating {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .bestSellerBody .productItems .card .card-body .rating span {
+  color: #f9a037;
+  text-decoration: none;
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .bestSellerBody .productItems .card .card-body .review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .bestSellerBody .productItems .card .card-body .review p {
+  color: #a1a0a0;
+  font-size: 12px;
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .bestSellerBody .productItems .card .card-body .card-title {
+  font-family: "poppinSemiBold";
+  margin-bottom: 0;
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .bestSellerBody .productItems .card .card-body .card-text {
+  color: #a1a0a0;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .bestSellerBody .productItems .card .card-body .pricing {
+  display: flex;
+  gap: 10px;
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .bestSellerBody .productItems .card .card-body .pricing .price {
+  font-size: 25px;
+  color: #e92b2b;
+  font-family: "poppinSemiBold";
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .bestSellerBody .productItems .card .card-body .pricing small {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.App main .pharmacy .switchDiv .ourCategories .productMain .bestSellerBody .productItems .card .card-body .sale {
+  background-color: #e92b2b;
+  color: white;
+  font-size: 12px;
+  border-radius: 20px 0 20px 0;
+  padding: 5px 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.App main .pharmacy .switchDiv .brands .productMain .mainHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.App main .pharmacy .switchDiv .brands .productMain .mainHeading hr {
+  width: 50%;
+}
+.App main .pharmacy .switchDiv .brands .productMain .mainHeading p {
+  font-size: 40px;
+  font-family: "poppinMedium";
+}
+.App main .pharmacy .switchDiv .brands .productMain .mainHeading p span {
+  color: #e92b2b;
+  font-family: "poppinBold";
+}
+.App main .pharmacy .switchDiv .brands .productMain .categoryCarousel {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.App main .pharmacy .switchDiv .brands .productMain .categoryCarousel .startHeading {
+  display: flex;
+}
+.App main .pharmacy .switchDiv .brands .productMain .categoryCarousel .startHeading p {
+  position: relative;
+  font-family: "poppinSemiBold";
+  font-size: 25px;
+}
+.App main .pharmacy .switchDiv .brands .productMain .categoryCarousel .startHeading p::after {
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #e92b2b;
+}
+.App main .pharmacy .switchDiv .brands .productMain .categoryCarousel .carousel {
+  margin-bottom: 15px;
+}
+.App main .pharmacy .switchDiv .brands .productMain .categoryCarousel .carousel .carouselItem .inner {
+  text-decoration: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.App main .pharmacy .switchDiv .brands .productMain .categoryCarousel .carousel .carouselItem .inner span {
+  color: #e92b2b;
+  font-size: 14px;
+}
+.App main .pharmacy .switchDiv .brands .productMain .categoryCarousel .viewButton {
+  text-align: right;
+}
+.App main .pharmacy .switchDiv .brands .productMain .categoryCarousel .viewButton a {
+  font-family: "poppinMedium";
+  color: #e92b2b;
+}
+.App main .pharmacy .switchDiv .brands .productMain .bestSellerBody .productItems .card {
+  position: relative;
+  border-radius: 20px 20px 20px 20px;
+  text-decoration: none;
+  color: rgb(31, 31, 31);
+}
+.App main .pharmacy .switchDiv .brands .productMain .bestSellerBody .productItems .card img {
+  width: 100%;
+  height: 280px;
+  border-radius: 20px 20px 20px 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.App main .pharmacy .switchDiv .brands .productMain .bestSellerBody .productItems .card .card-body .rating {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.App main .pharmacy .switchDiv .brands .productMain .bestSellerBody .productItems .card .card-body .rating span {
+  color: #f9a037;
+  text-decoration: none;
+}
+.App main .pharmacy .switchDiv .brands .productMain .bestSellerBody .productItems .card .card-body .review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .pharmacy .switchDiv .brands .productMain .bestSellerBody .productItems .card .card-body .review p {
+  color: #a1a0a0;
+  font-size: 12px;
+}
+.App main .pharmacy .switchDiv .brands .productMain .bestSellerBody .productItems .card .card-body .card-title {
+  font-family: "poppinSemiBold";
+  margin-bottom: 0;
+}
+.App main .pharmacy .switchDiv .brands .productMain .bestSellerBody .productItems .card .card-body .card-text {
+  color: #a1a0a0;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.App main .pharmacy .switchDiv .brands .productMain .bestSellerBody .productItems .card .card-body .pricing {
+  display: flex;
+  gap: 10px;
+}
+.App main .pharmacy .switchDiv .brands .productMain .bestSellerBody .productItems .card .card-body .pricing .price {
+  font-size: 25px;
+  color: #e92b2b;
+  font-family: "poppinSemiBold";
+}
+.App main .pharmacy .switchDiv .brands .productMain .bestSellerBody .productItems .card .card-body .pricing small {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.App main .pharmacy .switchDiv .brands .productMain .bestSellerBody .productItems .card .card-body .sale {
+  background-color: #e92b2b;
+  color: white;
+  font-size: 12px;
+  border-radius: 20px 0 20px 0;
+  padding: 5px 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.App main .pharmacy .switchDiv .productItem .productMain {
+  margin-top: 30px;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .itemImageMain {
+  background-color: rgb(241, 241, 241);
+  padding: 30px;
+  width: 80%;
+  min-width: 280px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .itemImageMain .itemImageInner {
+  width: 80%;
+  height: 80%;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .itemImageMain .itemImageInner img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .sale p {
+  color: #e92b2b;
+  background-color: rgba(233, 43, 43, 0.1921568627);
+  display: inline;
+  padding: 8px 10px;
+  font-size: 12px;
+  border-radius: 50px;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .productName {
+  font-size: 30px;
+  font-family: "poppinSemiBold";
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .rating .stars {
+  color: #f9a037;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .rating .review {
+  color: #a1a0a0;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .pricing {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .pricing p {
+  color: #e92b2b;
+  font-size: 40px;
+  font-family: "poppinBold";
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .pricing .saves {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .pricing .saves span {
+  font-size: 14px;
+  color: #e92b2b;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .pricing .saves small {
+  font-size: 20px;
+  color: #a1a0a0;
+  font-family: "poppinBold";
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .summary {
+  font-size: 14px;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .addition {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .addition .counter {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(214, 214, 214);
+  border-radius: 25px;
+  width: 100px;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .addition .counter .counterNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 70%;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .addition .counter .counterButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  flex-direction: column;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .addition .counter .counterButtons button {
+  background-color: rgba(255, 255, 255, 0);
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .addition .addToCartButton a {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 190px;
+  height: 50px;
+  padding: 15px 30px 0px 30px;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .addition .addToCartButton a i {
+  margin-right: 10px;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .addition .favoriteButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .addition .favoriteButton button {
+  padding: 10px 10px 5px 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(214, 214, 214);
+  background-color: rgba(161, 160, 160, 0);
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .itemInfo {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  align-items: center;
+  font-size: 14px;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .itemInfo .firstCol {
+  color: #a1a0a0;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .itemInfo .firstCol span {
+  color: #e92b2b;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .itemInfo .secondCol {
+  color: #a1a0a0;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .AboutItem .itemInfo .secondCol span {
+  color: #e92b2b;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .card .card-body .switchButton {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .card .card-body .switchButton .radioButton input {
+  display: none;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .card .card-body .switchButton .radioButton input[type=radio]:checked + label {
+  background-color: #e92b2b;
+  color: #fff;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .card .card-body .switchButton .radioButton input[type=radio]:checked + label img {
+  filter: brightness(1000%);
+}
+.App main .pharmacy .switchDiv .productItem .productMain .card .card-body .switchButton .radioButton input[type=radio]:checked + label .selectDoc {
+  filter: brightness(100%);
+}
+.App main .pharmacy .switchDiv .productItem .productMain .card .card-body .switchButton .radioButton input[type=radio]:checked + label span {
+  color: white;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .card .card-body .switchButton .radioButton label {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  font-size: 12px;
+  padding: 10px 0;
+  width: 100px;
+  text-align: center;
+  color: #e92b2b;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #e92b2b;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .card .card-body .switchTabs .description {
+  color: #a1a0a0;
+  font-size: 14px;
+  display: none;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .card .card-body .switchTabs .description .paragraph hr {
+  margin: 0.5rem 0;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .card .card-body .switchTabs .description .paragraph .heading {
+  color: #1e1729;
+  font-size: 20px;
+  font-family: "poppinSemiBold";
+}
+.App main .pharmacy .switchDiv .productItem .productMain .card .card-body .switchTabs .description .paragraph ul {
+  list-style: none;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .card .card-body .switchTabs .description .paragraph ul li::before {
+  content: "•";
+  color: red;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.App main .pharmacy .switchDiv .productItem .productMain .card .card-body .switchTabs .firstDiv {
+  display: flex;
+}
+.App main .pharmacy .switchDiv .cart .productMain .mainHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.App main .pharmacy .switchDiv .cart .productMain .mainHeading hr {
+  width: 50%;
+}
+.App main .pharmacy .switchDiv .cart .productMain .mainHeading p {
+  font-size: 40px;
+  font-family: "poppinMedium";
+}
+.App main .pharmacy .switchDiv .cart .productMain .mainHeading p span {
+  color: #e92b2b;
+  font-family: "poppinBold";
+}
+.App main .pharmacy .switchDiv .cart .productMain .cartBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .pharmacy .switchDiv .cart .productMain .cartBody .cardInner {
+  width: 60%;
+}
+.App main .pharmacy .switchDiv .cart .productMain .cartBody .cardInner .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.App main .pharmacy .switchDiv .cart .productMain .cartBody .cardInner .heading .yourOrder {
+  font-family: "poppinSemiBold";
+  font-size: 20px;
+  position: relative;
+}
+.App main .pharmacy .switchDiv .cart .productMain .cartBody .cardInner .heading .yourOrder::after {
+  content: "";
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #e92b2b;
+}
+.App main .pharmacy .switchDiv .cart .productMain .cartBody .cardInner .heading .total {
+  font-family: "poppinSemiBold";
+  font-size: 14px;
+  color: #a1a0a0;
+}
+.App main .pharmacy .switchDiv .cart .productMain .cartBody .cardInner .heading .total span {
+  font-size: 20px;
+  color: #e92b2b;
+}
+.App main .pharmacy .switchDiv .cart .productMain .cartBody .cardInner .listMain .image {
+  width: 100%;
+  max-width: 120px;
+  height: 100px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #dadada;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .pharmacy .switchDiv .cart .productMain .cartBody .cardInner .listMain .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.App main .pharmacy .switchDiv .cart .productMain .cartBody .cardInner .listMain .middle {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.App main .pharmacy .switchDiv .cart .productMain .cartBody .cardInner .listMain .middle .rating {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.App main .pharmacy .switchDiv .cart .productMain .cartBody .cardInner .listMain .middle .rating span {
+  color: #f9a037;
+  text-decoration: none;
+}
+.App main .pharmacy .switchDiv .cart .productMain .cartBody .cardInner .listMain .quantity {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.App main .pharmacy .switchDiv .cart .productMain .cartBody .cardInner .listMain .price {
+  font-size: 18px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e92b2b;
+  font-family: "poppinBold";
+}
+.App main .pharmacy .switchDiv .cart .productMain .cartBody .cardInner .buttonDiv {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: flex-end;
+}
+.App main .pharmacy .switchDiv .cart .productMain .cartBody .cardInner .buttonDiv a {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 160px;
+}
+.App main .pharmacy .switchDiv .checkOut .mainBody {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.App main .pharmacy .switchDiv .checkOut .mainBody .mainBodyHeading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.App main .pharmacy .switchDiv .checkOut .mainBody .mainBodyHeading h1 {
+  font-family: "poppinMedium";
+}
+.App main .pharmacy .switchDiv .checkOut .mainBody .mainBodyHeading h1 span {
+  font-family: "poppinExtraBold";
+  color: #e92b2b;
+}
+.App main .pharmacy .switchDiv .checkOut .mainBody .mainBodyInner .wrapper .selectDateTime label {
+  display: flex;
+  margin-bottom: 10px;
+  font-family: "poppinSemiBold";
+  width: 85%;
+}
+.App main .pharmacy .switchDiv .checkOut .mainBody .mainBodyInner .wrapper .selectDateTime .viewTest {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 80%;
+}
+.App main .pharmacy .switchDiv .checkOut .mainBody .mainBodyInner .wrapper .selectDateTime .selectDateTimeInput {
+  border: 2px solid #e92b2b;
+  border-radius: 30px;
+  padding: 10px;
+  width: 90%;
+  margin-bottom: 20px;
+}
+.App main .pharmacy .switchDiv .checkOut .mainBody .mainBodyInner .wrapper .selectDateTime p {
+  border: 2px solid #e92b2b;
+  border-radius: 30px;
+  padding: 10px;
+  width: 90%;
+  color: #e92b2b;
+  margin-bottom: 20px;
+  text-align: left;
+  background-color: rgba(233, 43, 43, 0.0901960784);
+}
+.App main .pharmacy .switchDiv .checkOut .mainBody .mainBodyInner .wrapper .selectDateTime select {
+  border: 2px solid #e92b2b;
+  border-radius: 30px;
+  padding: 10px;
+  width: 90%;
+  margin-bottom: 20px;
+}
+.App main .pharmacy .switchDiv .checkOut .mainBody .mainBodyInner .wrapper .appointmentButton {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  width: 95%;
+}
+.App main .pharmacy .switchDiv .checkOut .mainBody .mainBodyInner .wrapper .appointmentButton .done {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 200px;
+}
+.App main .pharmacy .switchDiv .checkOut .pagging .wrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  align-items: flex-end;
+}
+.App main .pharmacy .switchDiv .checkOut .pagging .wrapper .progressBar {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.App main .pharmacy .switchDiv .checkOut .pagging .wrapper .progressBar progress {
+  color: lightblue;
+  width: 150px;
+  height: 4px;
+}
+.App main .pharmacy .switchDiv .checkOut .pagging .wrapper .progressBar progress::-moz-progress-bar {
+  background: #e92b2b;
+}
+.App main .pharmacy .switchDiv .checkOut .pagging .wrapper .progressBar progress::-webkit-progress-value {
+  background: #e92b2b;
+}
+.App main .pharmacy .switchDiv .checkOut .pagging .wrapper .progressBar progress::-webkit-progress-bar {
+  background: rgba(233, 43, 43, 0.2117647059);
+}
+.App main .pharmacy .switchDiv .checkOut .pagging .wrapper .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.App main .pharmacy .switchDiv .checkOut .pagging .wrapper .buttons button {
+  background-color: #e92b2b;
+  color: white;
+  border-radius: 50%;
+  padding: 8px 11px;
+}
+.App main .pharmacy .switchDiv .checkOut .pagging .wrapper .buttons .backButton {
+  background-color: white;
+  color: #e92b2b;
+  border: 1px solid #e92b2b;
+  padding: 7px 10px;
+}
+.App main .pharmacy .switchDiv .checkOut .pagging .wrapper .buttons .nextButton:disabled {
+  opacity: 0.25;
+}
+.App main .pharmacy .switchDiv .checkOut .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content {
+  width: 100%;
+}
+.App main .pharmacy .switchDiv .checkOut .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .header {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  font-family: "poppinMedium";
+  font-size: 30px;
+  position: relative;
+}
+.App main .pharmacy .switchDiv .checkOut .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .header button {
+  width: 5px;
+  height: 8px;
+  background-color: white;
+  position: absolute;
+  right: 20px;
+}
+.App main .pharmacy .switchDiv .checkOut .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .header span {
+  font-family: "poppinBold";
+  color: #e92b2b;
+}
+.App main .pharmacy .switchDiv .checkOut .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .modal-body {
+  display: flex;
+  justify-content: center;
+}
+.App main .pharmacy .switchDiv .checkOut .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .modal-body img {
+  width: 200px;
+}
+.App main .pharmacy .switchDiv .checkOut .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .ButtonFooter {
+  display: flex;
+  justify-content: center;
+  font-family: "poppinMedium";
+  margin-bottom: 20px;
+}
+.App main .pharmacy .switchDiv .checkOut .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .ButtonFooter button {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.App main .insurance {
+  margin-bottom: 50px;
+  transition: opacity 1s ease;
+}
+.App main .insurance .insuranceBanner .banner .bannerText {
+  background-image: url(assets/images/Insurance/Bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 70px 70px;
+  border-bottom: 8px solid #e92b2b;
+  padding: 170px 0 0 0;
+}
+.App main .insurance .insuranceBanner .banner .bannerText .bannerInfo {
+  height: 150px;
+  text-align: center;
+}
+.App main .insurance .insuranceBanner .banner .bannerText .bannerInfo p {
+  font-family: "poppinExtraBold";
+  font-size: 50px;
+}
+.App main .insurance .insuranceBanner .banner .bannerText .bannerInfo p span {
+  color: #e92b2b;
+}
+.App main .insurance .switchDiv {
+  display: none;
+}
+.App main .insurance .switchDiv .mainBody {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyHeading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyHeading h1 {
+  font-family: "poppinMedium";
+}
+.App main .insurance .switchDiv .mainBody .mainBodyHeading h1 span {
+  font-family: "poppinExtraBold";
+  color: #e92b2b;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton {
+  margin-bottom: 30px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: none;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton .radio-button {
+  border: 1px solid #e92b2b;
+  width: 260px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  gap: 20px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton .radio-button i {
+  background-color: #e92b2b;
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 2px 4px 0 4px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton .radio-button hr {
+  opacity: 0.1;
+  width: 100%;
+  margin: 0;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton .radio-button .imgDiv {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton .radio-button .imgDiv .imgPlan {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton .radio-button .imgDiv .imgPlan img {
+  width: 40px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton .radio-button .imgDiv .plan {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 50%;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton .radio-button .imgDiv .plan p {
+  font-weight: 600;
+  font-size: 25px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton .radio-button .imgDiv .plan p span {
+  color: #e92b2b;
+  font-size: 30px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton .radio-button .imgDiv .plan small {
+  font-size: 11px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton .radio-button .imgDiv .duration {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton .radio-button .imgDiv .duration p {
+  font-size: 25px;
+  font-weight: 600;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton .radio-button .imgDiv .duration small {
+  font-size: 11px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton input[type=checkbox]:checked + label.radio-button {
+  background-color: #e92b2b;
+  color: #fff;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton input[type=checkbox]:checked + label.radio-button img {
+  filter: brightness(1000%);
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton input[type=checkbox]:checked + label.radio-button .providerClass {
+  filter: brightness(100%);
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton input[type=checkbox]:checked + label.radio-button span {
+  color: white;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton input[type=checkbox]:checked + label.radio-button .planDescription i {
+  background-color: white;
+  color: #e92b2b;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton input[type=checkbox]:checked + label.radio-button i {
+  background-color: white;
+  color: #e92b2b;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton .imgDiv {
+  position: relative;
+  justify-content: center;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton .imgDiv img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton .imgDiv .verify {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  right: 0;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton .info {
+  display: flex;
+  flex-direction: column;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton .info .planDescription {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton .info .planDescription i {
+  color: white;
+  background-color: #e92b2b;
+  border-radius: 50%;
+  padding: 2px 4px 2px 2px;
+  font-size: 10px;
+  padding: 2px 4px 0px 4px;
+  margin-right: 10px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton .info .planDescription .docPara {
+  text-align: left;
+  font-size: 12px;
+  font-family: "poppinMedium";
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton .info .planDescription .docPara span {
+  color: #e92b2b;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton {
+  margin-bottom: 30px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: none;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .radio-button {
+  border: 1px solid #e92b2b;
+  width: 260px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  gap: 20px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .radio-button hr {
+  opacity: 0.1;
+  width: 100%;
+  margin: 0;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .radio-button .imgDiv {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .radio-button .imgDiv .imgPlan {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .radio-button .imgDiv .imgPlan img {
+  width: 40px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .radio-button .imgDiv .plan {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 50%;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .radio-button .imgDiv .plan p {
+  font-weight: 600;
+  font-size: 25px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .radio-button .imgDiv .plan p span {
+  color: #e92b2b;
+  font-size: 30px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .radio-button .imgDiv .plan small {
+  font-size: 11px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .radio-button .imgDiv .duration {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .radio-button .imgDiv .duration p {
+  font-size: 25px;
+  font-weight: 600;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .radio-button .imgDiv .duration small {
+  font-size: 11px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button {
+  background-color: #e92b2b;
+  color: #fff;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button img {
+  filter: brightness(1000%);
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button .providerClass {
+  filter: brightness(100%);
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button span {
+  color: white;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button .planDescription i {
+  background-color: white;
+  color: #e92b2b;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .imgDiv {
+  position: relative;
+  justify-content: center;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .imgDiv img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .imgDiv .verify {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  right: 0;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .imgDiv1 {
+  position: relative;
+  justify-content: center;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .imgDiv1 img {
+  width: 100px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .imgDiv1 .verify {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  right: 0;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .info {
+  display: flex;
+  flex-direction: column;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .info .planDescription {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .info .planDescription i {
+  color: white;
+  background-color: #e92b2b;
+  border-radius: 50%;
+  padding: 2px 4px 2px 2px;
+  font-size: 10px;
+  padding: 2px 4px 0px 4px;
+  margin-right: 10px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .info .planDescription .docPara {
+  text-align: left;
+  font-size: 12px;
+  font-family: "poppinMedium";
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .info .planDescription .docPara span {
+  color: #e92b2b;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .react-datepicker {
+  width: 80%;
+  border-radius: 20px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .react-datepicker button {
+  margin-top: 10px;
+  color: white;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .react-datepicker .react-datepicker__month-container {
+  width: 100%;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .react-datepicker .react-datepicker__month-container .react-datepicker__header {
+  border-radius: 20px 20px 10px 10px;
+  background-color: #e92b2b;
+  height: 110px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__current-month {
+  font-size: 20px;
+  color: white;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__day-names {
+  margin-top: 15px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__day-names .react-datepicker__day-name {
+  color: white;
+  font-size: 20px;
+  width: 3rem;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week {
+  height: 60px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day {
+  font-size: 20px;
+  width: 3rem;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day--selected {
+  background-color: #e92b2b;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day--keyboard-selected {
+  background-color: #e92b2b;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .selectDateTimeLabel {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+  font-family: "poppinSemiBold";
+  margin-bottom: 10px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .selectDateTimeInput {
+  border: 2px solid #e92b2b;
+  border-radius: 30px;
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 20px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime p {
+  border: 2px solid #e92b2b;
+  border-radius: 30px;
+  padding: 10px;
+  width: 80%;
+  color: #e92b2b;
+  margin-bottom: 20px;
+  text-align: left;
+  background-color: rgba(233, 43, 43, 0.0901960784);
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime select {
+  border: 2px solid #e92b2b;
+  border-radius: 30px;
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 20px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .appointmentButton {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .appointmentButton .done {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 200px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .bookSomeone {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 250px;
+}
+.App main .insurance .pagging .wrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  align-items: flex-end;
+}
+.App main .insurance .pagging .wrapper .progressBar {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.App main .insurance .pagging .wrapper .progressBar progress {
+  color: lightblue;
+  width: 150px;
+  height: 4px;
+}
+.App main .insurance .pagging .wrapper .progressBar progress::-moz-progress-bar {
+  background: #e92b2b;
+}
+.App main .insurance .pagging .wrapper .progressBar progress::-webkit-progress-value {
+  background: #e92b2b;
+}
+.App main .insurance .pagging .wrapper .progressBar progress::-webkit-progress-bar {
+  background: rgba(233, 43, 43, 0.2117647059);
+}
+.App main .insurance .pagging .wrapper .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.App main .insurance .pagging .wrapper .buttons button {
+  background-color: #e92b2b;
+  color: white;
+  border-radius: 50%;
+  padding: 8px 11px;
+}
+.App main .insurance .pagging .wrapper .buttons .backButton {
+  background-color: white;
+  color: #e92b2b;
+  border: 1px solid #e92b2b;
+  padding: 7px 10px;
+}
+.App main .insurance .pagging .wrapper .buttons .nextButton:disabled {
+  opacity: 0.25;
+}
+.App main .insurance .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content {
+  width: 100%;
+}
+.App main .insurance .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .header {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  font-family: "poppinMedium";
+  font-size: 30px;
+  position: relative;
+}
+.App main .insurance .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .header button {
+  width: 5px;
+  height: 8px;
+  background-color: white;
+  position: absolute;
+  right: 20px;
+}
+.App main .insurance .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .header span {
+  font-family: "poppinBold";
+  color: #e92b2b;
+}
+.App main .insurance .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .modal-body {
+  display: flex;
+  justify-content: center;
+}
+.App main .insurance .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .modal-body img {
+  width: 200px;
+}
+.App main .insurance .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .ButtonFooter {
+  display: flex;
+  justify-content: center;
+  font-family: "poppinMedium";
+  margin-bottom: 20px;
+}
+.App main .insurance .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .ButtonFooter button {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.App main .insurance .firstSwitchDiv {
+  display: block;
+}
+.App main .loginForm {
+  margin-bottom: 50px;
+  transition: opacity 1s ease;
+}
+.App main .loginForm .loginBanner .banner .bannerText {
+  background-image: url(assets/images/registration/login.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 70px 70px;
+  border-bottom: 8px solid #e92b2b;
+  padding: 170px 0 0 0;
+}
+.App main .loginForm .loginBanner .banner .bannerText .bannerInfo {
+  height: 150px;
+  text-align: center;
+}
+.App main .loginForm .loginBanner .banner .bannerText .bannerInfo p {
+  font-family: "poppinExtraBold";
+  font-size: 50px;
+}
+.App main .loginForm .loginBanner .banner .bannerText .bannerInfo p span {
+  color: #e92b2b;
+}
+.App main .loginForm .login {
+  margin-top: 40px;
+}
+.App main .loginForm .login .loginMain .heading {
+  margin-bottom: 20px;
+  text-align: left;
+  width: 80%;
+}
+.App main .loginForm .login .loginMain .heading p {
+  font-family: "poppinBold";
+  color: #e92b2b;
+  font-size: 35px;
+}
+.App main .loginForm .login .loginMain .heading small {
+  font-family: "poppinMedium";
+}
+.App main .loginForm .login .loginMain .heading small a {
+  color: #e92b2b;
+  text-decoration: none;
+}
+.App main .loginForm .login .loginMain .loginInputFields {
+  margin-bottom: 20px;
+}
+.App main .loginForm .login .loginMain .loginInputFields input {
+  width: 100%;
+  border-radius: 50px;
+  height: 45px;
+  padding: 10px;
+  width: 80%;
+  border: 1px solid #d3d3d3;
+}
+.App main .loginForm .login .loginMain .loginInputFields2 {
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+.App main .loginForm .login .loginMain .loginInputFields2 input {
+  width: 100%;
+  border-radius: 50px;
+  height: 45px;
+  padding: 10px;
+  width: 35%;
+  border: 1px solid #d3d3d3;
+}
+.App main .loginForm .login .loginMain .loginInputFields2 .passwordMatch {
+  color: #e92b2b;
+  position: absolute;
+  bottom: -40%;
+  left: 10%;
+  font-size: 12px;
+}
+.App main .loginForm .login .loginMain .infoDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+.App main .loginForm .login .loginMain .infoDiv .rememberDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .loginForm .login .loginMain .infoDiv .rememberDiv input {
+  margin-right: 10px;
+}
+.App main .loginForm .login .loginMain .infoDiv .forgetDiv a {
+  color: #e92b2b;
+  text-decoration: none;
+}
+.App main .loginForm .login .loginMain .loginButton {
+  margin-bottom: 10px;
+}
+.App main .loginForm .login .loginMain .loginButton button {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 80%;
+}
+.App main .loginForm .login .loginMain .orDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 80%;
+}
+.App main .loginForm .login .loginMain .orDiv p {
+  position: relative;
+}
+.App main .loginForm .login .loginMain .orDiv p::after {
+  content: "";
+  position: absolute;
+  left: 30px;
+  bottom: 40%;
+  height: 2px;
+  background-color: #e2e2e2;
+  width: 100px;
+}
+.App main .loginForm .login .loginMain .orDiv p::before {
+  content: "";
+  position: absolute;
+  right: 30px;
+  bottom: 40%;
+  height: 2px;
+  background-color: #e2e2e2;
+  width: 100px;
+}
+.App main .loginForm .login .loginMain .loginOther {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.App main .loginForm .login .loginMain .loginOther button {
+  border: 1px solid #d3d3d3;
+  padding: 10px 20px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  font-size: 14px;
+  background-color: rgba(30, 20, 40, 0);
+}
+.App main .loginForm .login .loginMain .loginOther button i {
+  color: blue;
+}
+.App main .loginForm .login .loginMain .loginOther button img {
+  width: 15px;
+  height: 15px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.App main .loginForm .login .sideImageDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .loginForm .login .sideImageDiv img {
+  width: 80%;
+  height: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.App main .contactUs .contactBanner .banner .bannerText {
+  background-image: url(assets/images/Insurance/Bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 70px 70px;
+  border-bottom: 8px solid #e92b2b;
+  padding: 170px 0 0 0;
+}
+.App main .contactUs .contactBanner .banner .bannerText .bannerInfo {
+  height: 150px;
+  text-align: center;
+}
+.App main .contactUs .contactBanner .banner .bannerText .bannerInfo p {
+  font-family: "poppinExtraBold";
+  font-size: 50px;
+}
+.App main .contactUs .contactBanner .banner .bannerText .bannerInfo p span {
+  color: #e92b2b;
+}
+.App main .contactUs .contactSection .contactWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px 0;
+}
+.App main .contactUs .contactSection .contactWrapper .cardForm {
+  width: 70%;
+  padding: 50px;
+}
+.App main .contactUs .contactSection .contactWrapper .cardForm .contactForm .fields label {
+  display: block;
+}
+.App main .contactUs .contactSection .contactWrapper .cardForm .contactForm .fields input {
+  border: 1px solid #e92b2b;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+.App main .contactUs .contactSection .contactWrapper .cardForm .contactForm .fields textarea {
+  border: 1px solid #e92b2b;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  width: 100%;
+  resize: none;
+  height: 150px;
+}
+.App main .contactUs .contactSection .contactWrapper .cardForm .contactForm .fields button {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.App main .contactUs .contactSection .contactWrapper .cardForm .contactForm .fields p {
+  color: #e92b2b;
+  font-size: 18px;
+  font-weight: bold;
+}
+.App main .contactUs .contactSection .contactWrapper .cardForm .contactForm .fields .heading {
+  font-size: 28px;
+}
+.App main .contactUs .contactSection .contactWrapper .card {
+  width: 70%;
+}
+.App main .contactUs .contactSection .contactWrapper .cardAbout .contactAbout {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.App main .contactUs .contactSection .contactWrapper .cardAbout .contactAbout i {
+  color: #e92b2b;
+  font-size: 25px;
+}
+.App .greet .greetWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.App .greet .greetWrapper p {
+  color: #e92b2b;
+  font-size: 20px;
+  font-weight: 600;
+}
+.App .greet .greetWrapper img {
+  width: 250px;
+}
+
+@media only screen and (max-width: 1200px) {
+  main .homePage .homePageInner .aboutPara {
+    padding-right: 0 !important;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .mobileHeader {
+    display: block !important;
+  }
+  .mainHeader {
+    display: none;
+  }
+  .footer .footerMain {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText {
+    padding: 30px 0 0 0 !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .doctorImage img {
+    width: 280px !important;
+    height: 280px !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .Primary {
+    font-size: 35px !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .Health {
+    font-size: 40px !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .Service {
+    font-size: 30px !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .Home {
+    font-size: 30px !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .bookButtonOuter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  main .homePage .servicesMain .card {
+    margin-bottom: 30px;
+  }
+  main .homePage .employeeSection .employee .employeeAbout {
+    flex-flow: column;
+  }
+  main .homePage .employeeSection .employee .employeeAbout .employeeContactButton {
+    margin-bottom: 30px;
+  }
+  main .homePage .hiringSection .hiringAbout {
+    flex-flow: column;
+  }
+  main .homePage .hiringSection .hiringAbout .hiringContactButton {
+    margin-bottom: 30px;
+  }
+  .loginForm .sideImageDiv {
+    display: none;
+  }
+  .loginForm .sideImageDiv img {
+    display: none;
+  }
+  .bookDoctor .bookDoctorBanner .banner .bannerInner .bannerText {
+    padding: 100px 0 0 0;
+  }
+  .bookLab .bookDoctorBanner .banner .bannerInner .bannerText {
+    padding: 100px 0 0 0;
+  }
+  .insurance .insuranceBanner .banner .bannerInner .bannerText {
+    padding: 100px 0 0 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header .header .headerInner {
+    flex-flow: column;
+    width: 100%;
+  }
+  .footer .footerHeader .list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText {
+    padding: 30px 0 0 0 !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .doctorImage {
+    display: none;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .doctorImage img {
+    width: 280px !important;
+    height: 280px !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara {
+    width: 100%;
+  }
+  main .bookDoctor .bookDoctorBanner .banner .bannerInner .bannerText {
+    padding: 50px 0 0 0;
+  }
+  main .bookLab .bookDoctorBanner .banner .bannerInner .bannerText {
+    padding: 50px 0 0 0;
+  }
+  main .insurance .insuranceBanner .banner .bannerInner .bannerText {
+    padding: 50px 0 0 0;
+  }
+}
+@media only screen and (max-width: 576px) {
+  main .homePage .homePageInner .banner .bannerInner .bannerText {
+    padding: 30px 0 0 0 !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .doctorImage img {
+    width: 280px !important;
+    height: 280px !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .Primary {
+    font-size: 35px !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .Health {
+    font-size: 40px !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .Service {
+    font-size: 30px !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .Home {
+    font-size: 30px !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .bookButtonOuter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  main .homePage .homePageInner .serviceContainer .servicesmainHeading {
+    font-size: 30px !important;
+    text-align: center;
+  }
+  main .homePage .homePageInner .servicesMain .cardsCenterMob {
+    width: 70%;
+  }
+  main .homePage .homePageInner .servicesMain .cardsCenterMob .card {
+    margin-bottom: 30px;
+  }
+  main .bookDoctor .bookDoctorBanner .banner .bannerInner .bannerText {
+    padding: 70px 0 0 0;
+  }
+  main .bookDoctor .bookDoctorBanner .banner .bannerInner .bannerText .bannerInfo p {
+    font-size: 40px;
+  }
+  main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .react-datepicker {
+    width: 70% !important;
+  }
+  main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__day-names .react-datepicker__day-name {
+    width: 1.5rem !important;
+    font-size: 15px !important;
+  }
+  main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day {
+    font-size: 15px !important;
+    width: 1.5rem !important;
+  }
+  main .bookLab .bookDoctorBanner .banner .bannerInner .bannerText {
+    padding: 70px 0 0 0;
+  }
+  main .bookLab .bookDoctorBanner .banner .bannerInner .bannerText .bannerInfo p {
+    font-size: 40px;
+  }
+  main .insurance .insuranceBanner .banner .bannerInner .bannerText {
+    padding: 70px 0 0 0;
+  }
+  main .insurance .insuranceBanner .banner .bannerInner .bannerText .bannerInfo p {
+    font-size: 25px;
+  }
+  main .loginForm .loginOther {
+    justify-content: center !important;
+  }
+  main .loginForm .loginOther button {
+    margin-bottom: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */
