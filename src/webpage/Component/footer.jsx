@@ -120,7 +120,7 @@ export const Footer = () => {
               <div className='footer2Main'>
 
                 <div >
-                  <p>© Find My Doctor 2023 - Deisgn By Array Digitals</p>
+                  <p>© Find My Doctor 2023 - Design By Array Digitals</p>
                 </div>
                 <div className='footer2Link'>
                   <a href="#">Privacy Policy</a>
