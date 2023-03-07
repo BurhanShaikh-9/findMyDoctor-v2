@@ -21,7 +21,7 @@ const AuthService = () => {
       userToken(token);
       // window.location.href = document.referrer;
       navigate(ROUTING.HOMEPAGE)
-      location.reload()
+      window.location.reload();
       setUserObject(userName)
     }
     else {
