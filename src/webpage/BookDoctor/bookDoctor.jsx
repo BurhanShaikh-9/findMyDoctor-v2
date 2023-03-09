@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import self from '../../assets/images/BookDoctor/self.png'
 import parent from '../../assets/images/BookDoctor/parents.png'
 import online from '../../assets/images/BookDoctor/online.png'
@@ -21,8 +21,9 @@ import DatePicker from "react-datepicker";
 import { Greeting } from '../Component/greeting';
 import "react-datepicker/dist/react-datepicker.css";
 import TimePicker from 'react-time-picker';
-export const BookDoctor = () => {
 
+export const BookDoctor = () => {
+    
     const buttonRef1 = useRef(null);
     const buttonRef2 = useRef(null);
     const buttonRef3 = useRef(null);
@@ -87,7 +88,15 @@ export const BookDoctor = () => {
     const specialistBack2 = (e) => {
         e.preventDefault();
         buttonRef5.current.style.display = 'none';
-        buttonRef4.current.style.display = 'block';
+        if (doctorBooking.typeOfAppointment === "physical") {
+            buttonRef3.current.style.display = 'block';
+            console.log('block4');
+        }
+        else {
+            buttonRef4.current.style.display = 'block';
+            console.log('block3');
+        }
+
     }
     const specialistNext2 = (e) => {
         e.preventDefault();
@@ -127,9 +136,9 @@ export const BookDoctor = () => {
         buttonRef8.current.style.display = 'none';
         buttonRef9.current.style.display = 'block';
     }
-
+    const [bookedTime, setLabTime] = useState('00:00');
     const [bookDate, setBookDate] = useState(new Date());
-
+    const [date_time, setDateTime] = useState('');
     const [doctorBooking, setDoctorBooking] = useState(
         {
             bookedFor: "",
@@ -144,20 +153,40 @@ export const BookDoctor = () => {
         }
     )
 
-
+    //get Input from Form
     const getInput = (e) => {
         const name = e.target.name;
         const value = e.target.value;
         setDoctorBooking({ ...doctorBooking, [name]: value })
     }
 
+    //Form Submition after Taking Input
     const formSubmit = (e) => {
         e.preventDefault();
         appointmentSuccNext(e);
-        const BookDoctorVar = { ...doctorBooking, BookingDate, labTime }
+        const BookDoctorVar = { ...doctorBooking, date_time }
         console.log(BookDoctorVar);
     }
 
+
+    // Concatenate Time And Date
+    useEffect(() => {
+        setDateTime(BookingDate + ' ' + bookedTime)
+    }, [date_time])
+    
+    //removeing the fields from object if the opposite of it selected
+    const handleRemoveField = () => {
+        if (doctorBooking.typeOfAppointment === "physical") {
+            const { specialistDoctor, ...updatedUsers } = doctorBooking;
+            setDoctorBooking(updatedUsers);
+        }
+        else if(doctorBooking.typeOfAppointment === "online"){
+            const { doctorType, ...updatedUsers } = doctorBooking;
+            setDoctorBooking(updatedUsers);
+        }
+    }
+
+    //Date Formating
     const formatDate = date => {
         const year = date.getFullYear();
         const month = date.getMonth() + 1;
@@ -167,7 +196,7 @@ export const BookDoctor = () => {
 
 
     const BookingDate = formatDate(bookDate)
-    const [labTime, setLabTime] = useState('00:00');
+
     return (
         <>
             <main >
@@ -647,14 +676,14 @@ export const BookDoctor = () => {
                                                         inline
                                                     />
                                                     {/* <label htmlFor="selectTimeId" className='selectDateTimeLabel'>Pick your Time</label> */}
-                                                    <div className='TimePickerDiv'> <TimePicker onChange={setLabTime} value={labTime} /></div>
+                                                    <div className='TimePickerDiv'> <TimePicker onChange={setLabTime} value={bookedTime} /></div>
                                                 </div>
                                             </div>
                                             {/* <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 " align="center">
                                                 <div className='selectDateTime '>
                                                     <label htmlFor="selectTimeId" className='selectDateTimeLabel'>Enter Time</label>
                                                     <input type="time" id='selectTimeId' className='selectDateTimeInput' name='bookedTime' onChange={getInput}  /> 
-                                                 <div className='TimePickerDiv'> <TimePicker onChange={setLabTime} value={labTime} /></div>
+                                                 <div className='TimePickerDiv'> <TimePicker onChange={setLabTime} value={bookedTime} /></div>
                                                 </div>
                                             </div> */}
 
@@ -675,7 +704,7 @@ export const BookDoctor = () => {
                                         </div>
                                         <div className="buttons">
                                             <button href="#" className='backButton' onClick={dateTimeBack}><i className="bi bi-arrow-left"></i></button>
-                                            <button href="#" className='nextButton' onClick={dateTimeNext} disabled={!BookingDate || !labTime}><i className="bi bi-arrow-right"></i></button>
+                                            <button href="#" className='nextButton' onClick={dateTimeNext} disabled={!BookingDate || !bookedTime}><i className="bi bi-arrow-right"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -699,7 +728,7 @@ export const BookDoctor = () => {
                                             <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 " align="center">
                                                 <div className='selectDateTime '>
                                                     <label htmlFor="selectDateId" className='selectDateTimeLabel'> Date & Time</label>
-                                                    <p>{BookingDate} - {labTime}</p>
+                                                    <p>{BookingDate} - {bookedTime}</p>
                                                 </div>
                                             </div>
                                             <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 " align="center">
@@ -775,7 +804,7 @@ export const BookDoctor = () => {
                                             <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 " align="center">
                                                 <div className='selectDateTime '>
                                                     <label htmlFor="selectDateId" className='selectDateTimeLabel'> Date & Time</label>
-                                                    <p>{BookingDate} - {labTime}</p>
+                                                    <p>{BookingDate} - {bookedTime}</p>
                                                 </div>
                                             </div>
                                             <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 " align="center">
@@ -811,7 +840,7 @@ export const BookDoctor = () => {
 
                                             <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 " align="center">
                                                 <div className='appointmentButton '>
-                                                    <button className="done" type='submit' >
+                                                    <button className="done" type='submit' onClick={handleRemoveField}>
                                                         Done
                                                     </button>
 

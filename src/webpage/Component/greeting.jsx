@@ -7,7 +7,7 @@ export const Greeting = () => {
             <div className='greet'>
                 <div className="greetWrapper">
                     <img src={greetDoc} alt="" />
-                    <p>Thank You! <br/> Our Health Representator Will Contact You!</p>
+                    <p>Thank You! <br/> Our Health Representator Will Contact You Soon!</p>
                 </div>
 
             </div>
