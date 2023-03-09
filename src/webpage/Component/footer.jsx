@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../../assets/images/headerLogo.png'
 import { Link } from 'react-router-dom';
+import { ROUTING } from '../../utils/routes';
 export const Footer = () => {
   return (
     <>
@@ -42,11 +43,11 @@ export const Footer = () => {
             <div className="col-12 col-sm-12 col-md-12 col-lg-4 6 col-xl-4">
               <div className="footerMain">
                 <h5>Find My Doctor</h5>
-                <a>Book A Doctor</a>
-                <a>Lab Test</a>
-                <a>Covid-19 Test</a>
-                <a>Pharmacy</a>
-                <a>Sehat Card</a>
+                <Link to={ROUTING.BOOK_DOCTOR}>Book A Doctor</Link>
+                <Link to={ROUTING.BOOK_LAB}>Lab Test</Link>
+                {/* <Link to="">Covid-19 Test</Link> */}
+                <Link to={ROUTING.PHARMACY}>Pharmacy</Link>
+                <Link to="">Sehat Card</Link>
               </div>
             </div>
             <div className="col-12 col-sm-12 col-md-12 col-lg-4 6 col-xl-4">
@@ -54,11 +55,11 @@ export const Footer = () => {
                 <h5>Quick Links</h5>
                 <div className='linkFlex'>
                   <div>
-                    <a>Home</a>
-                    <a>Pharmacy</a>
-                    <a>About Us</a>
-                    <a>Contact Us</a>
-                    <a>Privacy Policy</a>
+                  <Link to={ROUTING.HOMEPAGE}>Home</Link>
+                  <Link to={ROUTING.PHARMACY}>Pharmacy</Link>
+                  <Link to={ROUTING.ABOUTUS}>About Us</Link>
+                  <Link to={ROUTING.CONTACT}>Contact Us</Link>
+                  <Link to="">Privacy Policy</Link>
                   </div>
                   <div>
                     <a>Shipping Policy</a>
@@ -81,13 +82,13 @@ export const Footer = () => {
                   </div>
                   <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <div className='list'>
-                      <a href="">HOME </a>
-                      <a href="">INSURE KARO</a>
-                      <a href="">PHARMACY</a>
-                      <a href="">CONSULTATION</a>
-                      <a href="">ABOUT US</a>
-                      <a href="">BLOG </a>
-                      <a href="">CONTACT US</a>
+                      <Link to={ROUTING.HOMEPAGE}>HOME </Link>
+                      <Link to={ROUTING.INSURANCE}>INSURE KARO</Link>
+                      <Link to={ROUTING.PHARMACY}>PHARMACY</Link>
+                      <Link to={ROUTING.BOOK_DOCTOR}>CONSULTATION</Link>
+                      <Link to={ROUTING.ABOUTUS}>ABOUT US</Link>
+                      <Link to="{ROUTING.HOMEPAGE}">BLOG </Link>
+                      <Link to={ROUTING.CONTACT}>CONTACT US</Link>
                     </div>
                   </div>
                   <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4">

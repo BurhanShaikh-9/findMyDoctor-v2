@@ -254,19 +254,6 @@ export const HomePage = () => {
                                         <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
                                             <div className="aboutPicOutter">
                                                 <img src={aboutImg} alt="" />
-
-                                                {/* <div className="aboutPictures">
-                                                    <div className="imageCircle">
-
-                                                        <img src={circle} alt="" />
-                                                    </div>
-                                                    <div className="image1">
-                                                        <img src={aboutPicOne} alt="" />
-                                                    </div>
-                                                    <div className="image2">
-                                                        <img src={aboutPicTwo} alt="" />
-                                                    </div>
-                                                </div> */}
                                             </div>
                                         </div>
 
@@ -311,7 +298,7 @@ export const HomePage = () => {
                                                     interview counselor, hiring manager, and other help.</p>
                                             </div>
                                             <div className='employeeContactButton'>
-                                                <Link href="#">Contact Us</Link>
+                                                <Link to={ROUTING.CONTACT}>Contact Us</Link>
                                             </div>
                                         </div>
                                         <div className="employeeBubbleDiv">
@@ -485,7 +472,7 @@ export const HomePage = () => {
                                             healthcare team and provide exceptional medical care to our patients.</p>
                                     </div>
                                     <div className='hiringContactButton'>
-                                        <Link href="#">Contact Us</Link>
+                                        <Link to={ROUTING.CONTACT}>Contact Us</Link>
                                     </div>
                                 </div>
                             </div>

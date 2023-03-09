@@ -180,6 +180,7 @@ p {
   width: 90%;
   height: 40px;
   background-color: rgba(0, 0, 0, 0);
+  color: white;
   outline: none;
   padding: 10px;
 }
@@ -218,6 +219,8 @@ p {
   font-size: 12px;
   display: block;
   margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
 }
 .App .footer .footerMain .linkFlex {
   display: flex;
@@ -3819,6 +3822,235 @@ p {
   color: #e92b2b;
   font-size: 25px;
 }
+.App main .aboutUs .aboutBanner .banner .bannerText {
+  background-image: url(assets/images/aboutus/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 70px 70px;
+  border-bottom: 8px solid #e92b2b;
+  padding: 170px 0 0 0;
+}
+.App main .aboutUs .aboutBanner .banner .bannerText .bannerInfo {
+  height: 150px;
+  text-align: center;
+}
+.App main .aboutUs .aboutBanner .banner .bannerText .bannerInfo p {
+  font-family: "poppinExtraBold";
+  font-size: 50px;
+}
+.App main .aboutUs .aboutBanner .banner .bannerText .bannerInfo p span {
+  color: #e92b2b;
+}
+.App main .aboutUs .aboutSection .aboutWrapper .ourTeam {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px 0;
+}
+.App main .aboutUs .aboutSection .aboutWrapper .ourTeam .teamHeading {
+  font-family: "poppinMedium";
+  font-size: 40px;
+}
+.App main .aboutUs .aboutSection .aboutWrapper .ourTeam .teamHeading span {
+  font-family: "poppinBold";
+  color: #e92b2b;
+}
+.App main .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.App main .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .ceo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.App main .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .ceo .image {
+  border-radius: 50%;
+  border: 2px solid #e92b2b;
+  width: 182px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.App main .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .ceo .image img {
+  width: 180px;
+}
+.App main .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .ceo .image .borderCircle {
+  top: 20px;
+  right: 8px;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #e92b2b;
+  padding: 6px;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+.App main .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .ceo .nameheading {
+  font-family: "poppinMedium";
+  font-size: 35px;
+}
+.App main .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .ceo small {
+  color: #e92b2b;
+}
+.App main .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .team .teamProfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+.App main .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .team .teamProfile .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.App main .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .team .teamProfile .profile .image {
+  border-radius: 50%;
+  border: 2px solid #e92b2b;
+  width: 102px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.App main .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .team .teamProfile .profile .image .profilePic {
+  width: 100px;
+}
+.App main .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .team .teamProfile .profile .image .company {
+  position: absolute;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  bottom: -10px;
+  left: -20px;
+}
+.App main .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .team .teamProfile .profile .image .borderCircle {
+  top: 5px;
+  right: 4px;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  background-color: #e92b2b;
+  padding: 5px;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+.App main .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .team .teamProfile .profile .nameheading {
+  font-family: "poppinSemiBold";
+  font-size: 20px;
+}
+.App main .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .team .teamProfile .profile small {
+  color: #e92b2b;
+}
+.App main .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .team .teamProfile .profile a {
+  color: #e92b2b;
+}
+.App main .aboutUs .ourStory {
+  background-color: #fffff9;
+  margin-top: 50px;
+  padding-top: 50px;
+}
+.App main .aboutUs .ourStory .aboutPicOutter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.App main .aboutUs .ourStory .aboutPicOutter img {
+  width: 70%;
+}
+.App main .aboutUs .ourStory .aboutPicOutter .newsImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .aboutUs .ourStory .aboutPicOutter .newsImage img {
+  width: 250px;
+}
+.App main .aboutUs .ourStory .aboutPara .heading {
+  width: 70%;
+}
+.App main .aboutUs .ourStory .aboutPara .heading .teamHeading {
+  font-family: "poppinMedium";
+  font-size: 40px;
+}
+.App main .aboutUs .ourStory .aboutPara .heading .teamHeading span {
+  font-family: "poppinBold";
+  color: #e92b2b;
+}
+.App main .aboutUs .ourStory .aboutPara .paragraph {
+  width: 70%;
+}
+.App main .aboutUs .ourStory .aboutPara2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.App main .aboutUs .ourStory .aboutPara2 .heading {
+  width: 70%;
+}
+.App main .aboutUs .ourStory .aboutPara2 .heading .teamHeading {
+  font-family: "poppinMedium";
+  font-size: 40px;
+}
+.App main .aboutUs .ourStory .aboutPara2 .heading .teamHeading span {
+  font-family: "poppinBold";
+  color: #e92b2b;
+}
+.App main .aboutUs .ourStory .aboutPara2 .paragraph {
+  width: 70%;
+}
+.App main .aboutUs .newsCarousel {
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+.App main .aboutUs .newsCarousel .CarouselHeading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.App main .aboutUs .newsCarousel .CarouselHeading p {
+  font-size: 50px;
+}
+.App main .aboutUs .newsCarousel .CarouselHeading p span {
+  color: #e92b2b;
+  font-family: "poppinExtraBold";
+}
+.App main .aboutUs .newsCarousel .carouselDiv .carouselInner .carouselItem {
+  justify-content: center;
+  display: flex !important;
+  align-items: center;
+}
+.App main .aboutUs .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner {
+  justify-content: center;
+  display: flex !important;
+  align-items: center;
+}
+.App main .aboutUs .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner img {
+  filter: grayscale(100%);
+}
+.App main .aboutUs .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner img:hover {
+  filter: grayscale(0);
+}
+.App main .aboutUs .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner1 {
+  justify-content: center;
+  display: flex !important;
+  align-items: center;
+}
+.App main .aboutUs .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner1 img {
+  filter: grayscale(100%);
+}
+.App main .aboutUs .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner1 img:hover {
+  filter: grayscale(0);
+}
 .App .greet .greetWrapper {
   display: flex;
   justify-content: center;
@@ -3853,6 +4085,10 @@ p {
     display: flex;
     justify-content: center;
     flex-direction: column;
+  }
+  .footer .footerMain a {
+    color: white;
+    text-decoration: none;
   }
   main .homePage .homePageInner .banner .bannerInner .bannerText {
     padding: 30px 0 0 0 !important;

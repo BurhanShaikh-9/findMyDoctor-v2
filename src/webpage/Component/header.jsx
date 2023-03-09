@@ -86,8 +86,8 @@ export const Header = (props) => {
                                     <Link to={ROUTING.HOMEPAGE}>Home</Link>
                                     <Link to={ROUTING.INSURANCE}>Insure Karo</Link>
                                     <Link to={ROUTING.PHARMACY}>Pharmacy</Link>
-                                    <Link href={ROUTING.BOOK_DOCTOR}>Consultation</Link>
-                                    <Link href="#">About Us</Link>
+                                    <Link to={ROUTING.BOOK_DOCTOR}>Consultation</Link>
+                                    <Link to={ROUTING.ABOUTUS}>About Us</Link>
                                     <Link href="#">Blog</Link>
                                     <Link to={ROUTING.CONTACT}>Contact Us</Link>
                                 </div>

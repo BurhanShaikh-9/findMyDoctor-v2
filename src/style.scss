@@ -259,7 +259,7 @@ p {
                         width: 90%;
                         height: 40px;
                         background-color: rgba(0, 0, 0, 0);
-
+                        color: white;
                         outline: none;
                         padding: 10px;
                     }
@@ -307,8 +307,14 @@ p {
 
             a {
                 font-size: 12px;
+
                 display: block;
                 margin-bottom: 10px;
+
+                color: white;
+                text-decoration: none;
+
+
             }
 
             .linkFlex {
@@ -2387,43 +2393,53 @@ p {
                                             border-radius: 50%;
                                             background-size: cover;
                                             background-repeat: no-repeat;
-                                            
+
                                             border: 2px solid #e92b2b;
                                             display: flex;
                                             justify-content: center;
                                             align-items: center;
                                             overflow: hidden;
+
                                             span {
                                                 color: white;
                                                 font-size: 14px;
 
                                             }
                                         }
-                                        .acidity{
+
+                                        .acidity {
                                             background-image: url(assets/images/Pharmacy/acidity.png);
                                         }
-                                        .acne{
+
+                                        .acne {
                                             background-image: url(assets/images/Pharmacy/acne.png);
                                         }
-                                        .babycare{
+
+                                        .babycare {
                                             background-image: url(assets/images/Pharmacy/babycare.png);
                                         }
-                                        .baldness{
+
+                                        .baldness {
                                             background-image: url(assets/images/Pharmacy/baldness.png);
                                         }
-                                        .cancer{
+
+                                        .cancer {
                                             background-image: url(assets/images/Pharmacy/cancer.png);
                                         }
-                                        .derma{
+
+                                        .derma {
                                             background-image: url(assets/images/Pharmacy/derma.png);
                                         }
-                                        .haircare{
+
+                                        .haircare {
                                             background-image: url(assets/images/Pharmacy/hairCare.png);
                                         }
-                                        .infer{
+
+                                        .infer {
                                             background-image: url(assets/images/Pharmacy/infer.png);
                                         }
-                                        .malaria{
+
+                                        .malaria {
                                             background-image: url(assets/images/Pharmacy/malaria.png);
                                         }
                                     }
@@ -4820,14 +4836,17 @@ p {
                     flex-direction: column;
                     gap: 30px;
                     padding: 50px 0;
-                    .cardForm{
+
+                    .cardForm {
                         width: 70%;
                         padding: 50px;
+
                         .contactForm {
                             .fields {
                                 label {
                                     display: block;
                                 }
+
                                 input {
                                     border: 1px solid #e92b2b;
                                     outline: none;
@@ -4835,7 +4854,8 @@ p {
                                     border-radius: 10px;
                                     width: 100%;
                                 }
-                                textarea{
+
+                                textarea {
                                     border: 1px solid #e92b2b;
                                     outline: none;
                                     padding: 5px 10px;
@@ -4844,58 +4864,380 @@ p {
                                     resize: none;
                                     height: 150px;
                                 }
-                                button{
+
+                                button {
                                     @include redButton;
                                 }
-                                p{
+
+                                p {
                                     color: #e92b2b;
                                     font-size: 18px;
                                     font-weight: bold;
                                 }
-                                .heading{
+
+                                .heading {
                                     font-size: 28px;
-                                   
+
                                 }
                             }
                         }
                     }
-                    .card{
+
+                    .card {
                         width: 70%;
                     }
-                    .cardAbout{
-                       
-                        .contactAbout{
+
+                    .cardAbout {
+
+                        .contactAbout {
                             display: flex;
                             justify-content: flex-start;
                             align-items: center;
                             flex-direction: column;
                             text-align: center;
-                            i{
+
+                            i {
                                 color: #e92b2b;
-                                font-size:25px;
+                                font-size: 25px;
                             }
                         }
                     }
-                  
-                   
+
+
+                }
+            }
+        }
+
+        .aboutUs {
+            .aboutBanner {
+                .banner {
+                    .bannerText {
+                        background-image: url(assets/images/aboutus/bg.png);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                        border-radius: 0 0 70px 70px;
+                        border-bottom: 8px solid #e92b2b;
+                        padding: 170px 0 0 0;
+
+                        .bannerInfo {
+                            height: 150px;
+                            text-align: center;
+
+                            p {
+                                font-family: 'poppinExtraBold';
+                                font-size: 50px;
+
+                                span {
+                                    color: #e92b2b;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .aboutSection {
+                .aboutWrapper {
+
+
+                    .ourTeam {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        gap: 30px;
+                        padding: 50px 0;
+
+                        .teamHeading {
+                            font-family: 'poppinMedium';
+                            font-size: 40px;
+
+                            span {
+                                font-family: 'poppinBold';
+                                color: #e92b2b;
+                            }
+
+                        }
+
+                        .ourTeamInner {
+                            text-align: center;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            gap: 50px;
+
+                            .ceo {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+
+                                .image {
+                                    border-radius: 50%;
+                                    border: 2px solid #e92b2b;
+                                    width: 182px;
+                                    display: flex;
+                                    justify-content: center;
+                                    position: relative;
+
+                                    img {
+                                        width: 180px;
+                                    }
+
+                                    .borderCircle {
+                                        top: 20px;
+                                        right: 8px;
+                                        position: absolute;
+                                        width: 8px;
+                                        height: 8px;
+                                        background-color: #e92b2b;
+                                        padding: 6px;
+                                        border-radius: 50%;
+                                        border: 5px solid white;
+                                    }
+                                }
+
+                                .nameheading {
+                                    font-family: 'poppinMedium';
+                                    font-size: 35px;
+
+
+                                }
+
+                                small {
+                                    color: #e92b2b;
+                                }
+                            }
+
+                            .team {
+                                .teamProfile {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    gap: 70px;
+                                    flex-wrap: wrap;
+
+                                    .profile {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        flex-direction: column;
+                                        .image {
+                                            border-radius: 50%;
+                                            border: 2px solid #e92b2b;
+                                            width: 102px;
+                                            display: flex;
+                                            justify-content: center;
+                                            position: relative;
+
+                                            .profilePic {
+                                                width: 100px;
+                                            }
+
+                                            .company {
+                                                position: absolute;
+                                                width: 50px;
+                                                object-fit: cover;
+                                                bottom: -10px;
+                                                left: -20px;
+                                            }
+
+                                            .borderCircle {
+                                                top: 5px;
+                                                right: 4px;
+                                                position: absolute;
+                                                width: 0px;
+                                                height: 0px;
+                                                background-color: #e92b2b;
+                                                padding: 5px;
+                                                border-radius: 50%;
+                                                border: 4px solid white;
+                                            }
+                                        }
+                                        .nameheading {
+                                            font-family: 'poppinSemiBold';
+                                            font-size: 20px;
+
+
+                                        }
+                                        small {
+                                            color: #e92b2b;
+                                        }
+                                        a{
+                                            color: #e92b2b;
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .ourStory {
+                background-color: #fffff9;
+                margin-top: 50px;
+                padding-top: 50px;
+
+
+                .aboutPicOutter {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 50px;
+
+                    img {
+                        width: 70%;
+                    }
+
+                    .newsImage {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            width: 250px;
+                        }
+                    }
+
+                    // }
+                }
+
+                .aboutPara {
+
+                    .heading {
+                        width: 70%;
+
+                        .teamHeading {
+                            font-family: 'poppinMedium';
+                            font-size: 40px;
+
+                            span {
+                                font-family: 'poppinBold';
+                                color: #e92b2b;
+                            }
+
+                        }
+                    }
+
+                    .paragraph {
+                        width: 70%;
+                    }
+
+                }
+
+                .aboutPara2 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex-direction: column;
+
+                    .heading {
+                        width: 70%;
+
+                        .teamHeading {
+                            font-family: 'poppinMedium';
+                            font-size: 40px;
+
+                            span {
+                                font-family: 'poppinBold';
+                                color: #e92b2b;
+                            }
+
+                        }
+                    }
+
+                    .paragraph {
+                        width: 70%;
+                    }
+
+                }
+            }
+
+            .newsCarousel {
+                margin-top: 80px;
+                margin-bottom: 50px;
+
+                .CarouselHeading {
+                    text-align: center;
+                    margin-bottom: 20px;
+
+                    p {
+                        font-size: 50px;
+
+                        span {
+                            color: #e92b2b;
+                            font-family: 'poppinExtraBold';
+                        }
+                    }
+                }
+
+                .carouselDiv {
+                    .carouselInner {
+                        .carouselItem {
+                            justify-content: center;
+                            display: flex !important;
+                            align-items: center;
+
+                            .carouselItemInner {
+                                justify-content: center;
+                                display: flex !important;
+                                align-items: center;
+
+                                img {
+
+                                    filter: grayscale(100%);
+                                }
+
+                                img:hover {
+                                    filter: grayscale(0);
+                                }
+
+                            }
+
+                            .carouselItemInner1 {
+                                justify-content: center;
+                                display: flex !important;
+                                align-items: center;
+
+                                img {
+
+                                    filter: grayscale(100%);
+                                }
+
+                                img:hover {
+                                    filter: grayscale(0);
+                                }
+
+                            }
+                        }
+                    }
+
                 }
             }
         }
     }
-    .greet{
-        .greetWrapper{
+
+    .greet {
+        .greetWrapper {
             display: flex;
             justify-content: center;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            p{
+
+            p {
                 color: #e92b2b;
                 font-size: 20px;
-                font-weight:600;
-      
+                font-weight: 600;
+
             }
-            img{
+
+            img {
                 width: 250px;
             }
         }
@@ -4944,6 +5286,10 @@ p {
             justify-content: center;
             flex-direction: column;
 
+            a {
+                color: white;
+                text-decoration: none;
+            }
 
         }
     }

@@ -22,6 +22,7 @@ import { Signup } from './webpage/Registration/signup';
 import tokenService from './services/token.service'
 import { Contact } from './webpage/ContactUs/contact';
 import { Greeting } from './webpage/Component/greeting';
+import { Aboutus } from './webpage/aboutUs/aboutus';
 function App() {
   const { getToken, clearToken, getUserObject } = tokenService();
   const [userToken, setUserToken] = useState(getToken());
@@ -48,6 +49,7 @@ function App() {
             <Route path={ROUTING.CHECKOUT} element={<CheckOut/>}></Route>
           </Route>
           <Route path={ROUTING.CONTACT} element={<Contact/>}></Route>
+          <Route path={ROUTING.ABOUTUS} element={<Aboutus/>}></Route>
           <Route path={ROUTING.LOGIN} element={<Login />} />
           <Route path={ROUTING.SIGNUP} element={<Signup />} />
           {/* <Route path={ROUTING.THANKYOU} element={Greeting}></Route> */}

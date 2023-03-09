@@ -23,7 +23,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import TimePicker from 'react-time-picker';
 
 export const BookDoctor = () => {
-    
+
     const buttonRef1 = useRef(null);
     const buttonRef2 = useRef(null);
     const buttonRef3 = useRef(null);
@@ -150,6 +150,7 @@ export const BookDoctor = () => {
             paymentMethod: "Cash",
             cardNumber: "",
             promoCode: "",
+            address:"",
         }
     )
 
@@ -270,8 +271,8 @@ export const BookDoctor = () => {
                                 <div className="container">
                                     <div className="wrapper">
                                         <div className="progressBar">
-                                            <label htmlFor="pageProgress">1 of 8 answered</label>
-                                            <progress min="0" max="80" value="10" id='pageProgress' />
+                                            <label htmlFor="pageProgress">1 of 7 answered</label>
+                                            <progress min="0" max="70" value="10" id='pageProgress' />
                                         </div>
                                         <div className="buttons">
                                             <button href="#" className='nextButton' onClick={bookingForNext} disabled={!doctorBooking.bookedFor}><i className="bi bi-arrow-right"></i></button>
@@ -327,8 +328,8 @@ export const BookDoctor = () => {
                                 <div className="container">
                                     <div className="wrapper">
                                         <div className="progressBar">
-                                            <label htmlFor="pageProgress">2 of 8 answered</label>
-                                            <progress min="0" max="80" value="20" id='pageProgress' />
+                                            <label htmlFor="pageProgress">2 of 7 answered</label>
+                                            <progress min="0" max="70" value="20" id='pageProgress' />
                                         </div>
                                         <div className="buttons">
                                             <button href="#" className='backButton' onClick={AppointmentTypeBack} ><i className="bi bi-arrow-left"></i></button>
@@ -397,8 +398,8 @@ export const BookDoctor = () => {
                                 <div className="container">
                                     <div className="wrapper">
                                         <div className="progressBar">
-                                            <label htmlFor="pageProgress">3 of 8 answered</label>
-                                            <progress min="0" max="80" value="30" id='pageProgress' />
+                                            <label htmlFor="pageProgress">3 of 7 answered</label>
+                                            <progress min="0" max="70" value="30" id='pageProgress' />
                                         </div>
                                         <div className="buttons">
                                             <button href="#" className='backButton' onClick={DoctorTypeBack}  ><i className="bi bi-arrow-left"></i></button>
@@ -522,8 +523,8 @@ export const BookDoctor = () => {
                                 <div className="container">
                                     <div className="wrapper">
                                         <div className="progressBar">
-                                            <label htmlFor="pageProgress">4 of 8 answered</label>
-                                            <progress min="0" max="80" value="40" id='pageProgress' />
+                                            <label htmlFor="pageProgress">3 of 7 answered</label>
+                                            <progress min="0" max="70" value="30" id='pageProgress' />
                                         </div>
                                         <div className="buttons">
                                             <button href="#" className='backButton' onClick={specialistBack}><i className="bi bi-arrow-left"></i></button>
@@ -640,8 +641,8 @@ export const BookDoctor = () => {
                                 <div className="container">
                                     <div className="wrapper">
                                         <div className="progressBar">
-                                            <label htmlFor="pageProgress">5 of 8 answered</label>
-                                            <progress min="0" max="80" value="50" id='pageProgress' />
+                                            <label htmlFor="pageProgress">4 of 7 answered</label>
+                                            <progress min="0" max="70" value="40" id='pageProgress' />
                                         </div>
                                         <div className="buttons">
                                             <button href="#" className='backButton' onClick={specialistBack2}><i className="bi bi-arrow-left"></i></button>
@@ -699,8 +700,8 @@ export const BookDoctor = () => {
                                 <div className="container">
                                     <div className="wrapper">
                                         <div className="progressBar">
-                                            <label htmlFor="pageProgress">6 of 8 answered</label>
-                                            <progress min="0" max="80" value="60" id='pageProgress' />
+                                            <label htmlFor="pageProgress">5 of 7 answered</label>
+                                            <progress min="0" max="70" value="50" id='pageProgress' />
                                         </div>
                                         <div className="buttons">
                                             <button href="#" className='backButton' onClick={dateTimeBack}><i className="bi bi-arrow-left"></i></button>
@@ -764,6 +765,12 @@ export const BookDoctor = () => {
                                                     <input type="text" id='selectTimeId' className='selectDateTimeInput' placeholder='Enter Promo Code...' name='promoCode' onChange={getInput} />
                                                 </div>
                                             </div>
+                                            <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 " align="center">
+                                                <div className='selectDateTime '>
+                                                    <label htmlFor="selectTimeId" className='selectDateTimeLabel'>Address</label>
+                                                    <input type="text" id='selectTimeId' className='selectDateTimeInput' placeholder='Enter Address...' name='address' onChange={getInput} />
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -775,12 +782,12 @@ export const BookDoctor = () => {
                                 <div className="container">
                                     <div className="wrapper">
                                         <div className="progressBar">
-                                            <label htmlFor="pageProgress">7 of 8 answered</label>
-                                            <progress min="0" max="80" value="70" id='pageProgress' />
+                                            <label htmlFor="pageProgress">6 of 7 answered</label>
+                                            <progress min="0" max="60" value="70" id='pageProgress' />
                                         </div>
                                         <div className="buttons">
                                             <button href="#" className='backButton' onClick={confirmBack}><i className="bi bi-arrow-left"></i></button>
-                                            <button href="#" className='nextButton' onClick={confirmNext} disabled={!doctorBooking.recipient || !doctorBooking.cardNumber}><i className="bi bi-arrow-right"></i></button>
+                                            <button href="#" className='nextButton' onClick={confirmNext} disabled={!doctorBooking.recipient || !doctorBooking.cardNumber || !doctorBooking.address}><i className="bi bi-arrow-right"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -837,6 +844,12 @@ export const BookDoctor = () => {
                                                     <p>{doctorBooking.cardNumber}</p>
                                                 </div>
                                             </div>
+                                            <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 " align="center">
+                                                <div className='selectDateTime '>
+                                                    <label htmlFor="selectTimeId" className='selectDateTimeLabel'>Address</label>
+                                                    <p>{doctorBooking.address}</p>
+                                                </div>
+                                            </div>
 
                                             <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 " align="center">
                                                 <div className='appointmentButton '>
@@ -857,8 +870,8 @@ export const BookDoctor = () => {
                                 <div className="container">
                                     <div className="wrapper">
                                         <div className="progressBar">
-                                            <label htmlFor="pageProgress">8 of 8 answered</label>
-                                            <progress min="0" max="80" value="80" id='pageProgress' />
+                                            <label htmlFor="pageProgress">7 of 7 answered</label>
+                                            <progress min="0" max="70" value="70" id='pageProgress' />
                                         </div>
                                         <div className="buttons">
                                             <button href="#" className='backButton' onClick={appointmentSuccBack}><i className="bi bi-arrow-left"></i></button>

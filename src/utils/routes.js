@@ -17,4 +17,5 @@ export const ROUTING = {
     CHECKOUT:"/pharmacy/checkout",
     CONTACT:"/contact-us",
     THANKYOU:"/thank-you",
+    ABOUTUS:"/about-us"
 }
