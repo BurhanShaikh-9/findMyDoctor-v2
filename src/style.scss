@@ -5025,6 +5025,7 @@ p {
                                         justify-content: center;
                                         align-items: center;
                                         flex-direction: column;
+
                                         .image {
                                             border-radius: 50%;
                                             border: 2px solid #e92b2b;
@@ -5057,16 +5058,19 @@ p {
                                                 border: 4px solid white;
                                             }
                                         }
+
                                         .nameheading {
                                             font-family: 'poppinSemiBold';
                                             font-size: 20px;
 
 
                                         }
+
                                         small {
                                             color: #e92b2b;
                                         }
-                                        a{
+
+                                        a {
                                             color: #e92b2b;
                                         }
 
@@ -5219,6 +5223,197 @@ p {
 
                 }
             }
+        }
+
+        .profileMain {
+            margin-bottom: 50px;
+            transition: opacity 1s ease;
+
+            .profileBanner {
+                .banner {
+
+                    .bannerText {
+                        background-image: url(assets/images/profile/Bg.png);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                        border-radius: 0 0 70px 70px;
+                        border-bottom: 8px solid #e92b2b;
+                        padding: 170px 0 0 0;
+
+                        .bannerInfo {
+                            height: 150px;
+                            text-align: center;
+
+                            p {
+                                font-family: 'poppinExtraBold';
+                                font-size: 50px;
+
+                                span {
+                                    color: #e92b2b;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .profile {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding-top: 40px;
+
+                .profileSide {
+
+                    width: 300px;
+                    margin-top: 40px;
+
+                    ul {
+                        list-style-type: none;
+                        margin-left: 0;
+                        padding-left: 0;
+
+                        li {
+                            margin-bottom: 20px;
+
+                            a {
+                                display: block;
+                                color: black;
+                                text-decoration: none;
+                            }
+
+                            .active {
+                                background-color: #e92b2b;
+                                color: white;
+                                width: 200px;
+                                border-radius: 10px;
+                                padding: 10px;
+                            }
+                        }
+                    }
+                }
+
+                .profileBody {
+
+                    width: 100%;
+
+                    .profileInner {
+                        display: flex;
+                        flex-direction: column;
+
+                        .profileHead {
+                            width: 100%;
+                            position: relative;
+
+                            .photoContent {
+
+
+                                .coverPhoto {
+                                    background: url(/src/assets/images/profile/profileBg.png);
+                                    background-size: cover;
+                                    background-position: center;
+                                    min-height: 250px;
+                                    width: 100%;
+                                    border-radius: 100px 10px 10px 10px;
+                                }
+
+                            }
+
+                            .profileInfo {
+                                display: flex;
+                                flex-direction: row;
+
+                                .profilePhoto {
+                                    position: absolute;
+                                    top: 190px;
+                                    left: 20px;
+
+                                    img {
+                                        width: 150px;
+                                        object-fit: cover;
+                                        height: 150px;
+                                        border: 5px solid white;
+                                    }
+
+                                }
+
+                                .profileDetails {
+                                    margin-left: 25%;
+                                    display: flex;
+                                    flex-direction: row;
+                                    flex-wrap: wrap;
+                                    justify-content: space-between;
+                                    width: 100%;
+                                    align-items: center;
+
+                                    .editButton {
+                                        button {
+                                            @include redButton;
+                                            background-color: rgb(37, 37, 37);
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+
+                        form {
+                            width: 100%;
+
+                            .profileForm {
+                                margin-top: 70px;
+
+                                .fields {
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+
+                                    label {
+                                        width: 40%;
+                                    }
+
+                                    .inputField {
+                                        display: inline-block;
+                                        width: 60%;
+
+                                        input {
+                                            border: 1px solid grey;
+                                            width: 80%;
+                                            border-radius: 10px;
+                                            padding: 5px 10px;
+                                        }
+
+                                        textarea {
+                                            resize: none;
+                                            border: 1px solid grey;
+                                            width: 80%;
+                                            border-radius: 10px;
+                                            padding: 5px 10px;
+                                        }
+
+                                        img {
+                                            width: 80px;
+                                            height: 80px;
+                                            object-fit: cover;
+                                            border-radius: 50%;
+                                            margin-right: 50%;
+                                        }
+
+                                        button {
+                                            color: grey;
+                                            background-color: #1e172900;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
         }
     }
 
@@ -5381,6 +5576,40 @@ p {
                     }
                 }
             }
+        }
+
+        .profileMain {
+            .profile {
+                flex-direction: column;
+
+                .profileSide {
+                    width: 100% !important;
+
+                    ul {
+                        display: flex;
+                        gap: 10px;
+                        overflow-x: auto;
+                        li{
+                            a{
+                                display: block;
+                                padding: 10px !important;
+                            }
+                            .active{
+                                background-color: #e92b2b;
+                                color: white;
+                                display: block;
+                                width: auto !important;
+                                border-radius: 10px;
+                                padding: 10px;
+                            }
+                            
+                        }
+                    }
+                }
+
+            }
+
+
         }
     }
 

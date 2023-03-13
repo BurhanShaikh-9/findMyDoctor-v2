@@ -4051,6 +4051,163 @@ p {
 .App main .aboutUs .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner1 img:hover {
   filter: grayscale(0);
 }
+.App main .profileMain {
+  margin-bottom: 50px;
+  transition: opacity 1s ease;
+}
+.App main .profileMain .profileBanner .banner .bannerText {
+  background-image: url(assets/images/profile/Bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 70px 70px;
+  border-bottom: 8px solid #e92b2b;
+  padding: 170px 0 0 0;
+}
+.App main .profileMain .profileBanner .banner .bannerText .bannerInfo {
+  height: 150px;
+  text-align: center;
+}
+.App main .profileMain .profileBanner .banner .bannerText .bannerInfo p {
+  font-family: "poppinExtraBold";
+  font-size: 50px;
+}
+.App main .profileMain .profileBanner .banner .bannerText .bannerInfo p span {
+  color: #e92b2b;
+}
+.App main .profileMain .profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 40px;
+}
+.App main .profileMain .profile .profileSide {
+  width: 300px;
+  margin-top: 40px;
+}
+.App main .profileMain .profile .profileSide ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.App main .profileMain .profile .profileSide ul li {
+  margin-bottom: 20px;
+}
+.App main .profileMain .profile .profileSide ul li a {
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+.App main .profileMain .profile .profileSide ul li .active {
+  background-color: #e92b2b;
+  color: white;
+  width: 200px;
+  border-radius: 10px;
+  padding: 10px;
+}
+.App main .profileMain .profile .profileBody {
+  width: 100%;
+}
+.App main .profileMain .profile .profileBody .profileInner {
+  display: flex;
+  flex-direction: column;
+}
+.App main .profileMain .profile .profileBody .profileInner .profileHead {
+  width: 100%;
+  position: relative;
+}
+.App main .profileMain .profile .profileBody .profileInner .profileHead .photoContent .coverPhoto {
+  background: url(/src/assets/images/profile/profileBg.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 250px;
+  width: 100%;
+  border-radius: 100px 10px 10px 10px;
+}
+.App main .profileMain .profile .profileBody .profileInner .profileHead .profileInfo {
+  display: flex;
+  flex-direction: row;
+}
+.App main .profileMain .profile .profileBody .profileInner .profileHead .profileInfo .profilePhoto {
+  position: absolute;
+  top: 190px;
+  left: 20px;
+}
+.App main .profileMain .profile .profileBody .profileInner .profileHead .profileInfo .profilePhoto img {
+  width: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 150px;
+  border: 5px solid white;
+}
+.App main .profileMain .profile .profileBody .profileInner .profileHead .profileInfo .profileDetails {
+  margin-left: 25%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.App main .profileMain .profile .profileBody .profileInner .profileHead .profileInfo .profileDetails .editButton button {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  background-color: rgb(37, 37, 37);
+}
+.App main .profileMain .profile .profileBody .profileInner form {
+  width: 100%;
+}
+.App main .profileMain .profile .profileBody .profileInner form .profileForm {
+  margin-top: 70px;
+}
+.App main .profileMain .profile .profileBody .profileInner form .profileForm .fields {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.App main .profileMain .profile .profileBody .profileInner form .profileForm .fields label {
+  width: 40%;
+}
+.App main .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField {
+  display: inline-block;
+  width: 60%;
+}
+.App main .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField input {
+  border: 1px solid grey;
+  width: 80%;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.App main .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField textarea {
+  resize: none;
+  border: 1px solid grey;
+  width: 80%;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.App main .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField img {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin-right: 50%;
+}
+.App main .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField button {
+  color: grey;
+  background-color: rgba(30, 23, 41, 0);
+}
 .App .greet .greetWrapper {
   display: flex;
   justify-content: center;
@@ -4128,6 +4285,29 @@ p {
   }
   main .homePage .hiringSection .hiringAbout .hiringContactButton {
     margin-bottom: 30px;
+  }
+  main .profileMain .profile {
+    flex-direction: column;
+  }
+  main .profileMain .profile .profileSide {
+    width: 100% !important;
+  }
+  main .profileMain .profile .profileSide ul {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+  }
+  main .profileMain .profile .profileSide ul li a {
+    display: block;
+    padding: 10px !important;
+  }
+  main .profileMain .profile .profileSide ul li .active {
+    background-color: #e92b2b;
+    color: white;
+    display: block;
+    width: auto !important;
+    border-radius: 10px;
+    padding: 10px;
   }
   .loginForm .sideImageDiv {
     display: none;

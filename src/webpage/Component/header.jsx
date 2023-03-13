@@ -64,7 +64,7 @@ export const Header = (props) => {
                                             <i className="ri-user-line"></i> {username}
                                         </button>
                                         <ul className="dropdown-menu">
-                                            <li><a className="dropdown-item" href="#">User Profile</a></li>
+                                            <li><Link className="dropdown-item" to={ROUTING.PROFILE}>User Profile</Link></li>
                                             <li><a className="dropdown-item" href="#">Settings</a></li>
                                             <li><button className="dropdown-item" onClick={handleSignOut}>Sign Out</button></li>
                                         </ul>
@@ -126,7 +126,7 @@ export const Header = (props) => {
                                                         <i className="ri-user-line"></i> {username}
                                                     </button>
                                                     <ul className="dropdown-menu">
-                                                        <li><a className="dropdown-item" href="#">User Profile</a></li>
+                                                        <li><Link className="dropdown-item" to={ROUTING.PROFILE}>User Profile</Link></li>
                                                         <li><a className="dropdown-item" href="#">Settings</a></li>
                                                         <li><button className="dropdown-item" onClick={handleSignOut}>Sign Out</button></li>
                                                     </ul>

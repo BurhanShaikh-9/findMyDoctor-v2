@@ -17,5 +17,15 @@ export const ROUTING = {
     CHECKOUT:"/pharmacy/checkout",
     CONTACT:"/contact-us",
     THANKYOU:"/thank-you",
-    ABOUTUS:"/about-us"
+    ABOUTUS:"/about-us",
+    PROFILE:"/profile",
+    MYPROFILE:"/profile/my-profile",
+    PRESCIPTION:"/profile/presciption",
+    BENEFICIARY:"/profile/beneficiary",
+    REPORT:"/profile/report",
+    MY_INSURANCE:"/profile/my-insurance",
+    BILLING:"/profile/billing",
+    PAYMENT:"/profile/payment",
+    LOGOUT:"/profile/logout",
+
 }
