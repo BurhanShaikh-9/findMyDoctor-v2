@@ -1,8 +1,11 @@
 import React from 'react'
-import { Link, NavLink, Outlet } from 'react-router-dom'
+import { Link, NavLink, Outlet, useMatch } from 'react-router-dom'
 import { ROUTING } from '../../utils/routes'
+import { Myprofile } from '../profile/profilePages/myprofile'
+
 
 export const ProfileLayout = () => {
+    const isMatch = useMatch("/:children");
     return (
         <>
             <main >
@@ -37,7 +40,8 @@ export const ProfileLayout = () => {
                                     </ul>
                                 </div>
                                 <div className="profileBody">
-                                    <Outlet />
+                                    <div className="row gx-0"> {!!isMatch ? <Myprofile />  : <Outlet /> }</div>
+
                                 </div>
                             </div>
                         </div>

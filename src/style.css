@@ -4208,6 +4208,218 @@ p {
   color: grey;
   background-color: rgba(30, 23, 41, 0);
 }
+.App main .profileMain .profile .profileBody .profileWrapper .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .header .mainHeading {
+  font-weight: 600;
+  font-size: 30px;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .header .headerButton button {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 190px;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .header .headerButton a {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 175px;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .body {
+  position: relative;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .body .table-responsive .table {
+  font-size: 14px;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .body .table-responsive .table thead tr {
+  border-color: #1e1428;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .body .table-responsive .table thead tr th {
+  color: #a1a0a0;
+  font-weight: 500;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .body .table-responsive .table tbody tr td {
+  min-width: 80px;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .body .table-responsive .table tbody tr td .edit {
+  color: grey;
+  font-size: 14px;
+  margin-left: 10px;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .body .table-responsive .table tbody tr td .delete {
+  background-color: #e92b2b;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 7px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .body .card {
+  border-radius: 25px;
+  width: 50%;
+  border: none;
+  background-image: linear-gradient(to bottom right, rgb(180, 255, 251), rgb(255, 163, 243));
+}
+.App main .profileMain .profile .profileBody .profileWrapper .body .card::after {
+  content: "";
+  position: absolute;
+  inset: -0.625em;
+  width: 450px;
+  height: 200px;
+  left: 27px;
+  border-radius: 20px;
+  top: 35px;
+  background: linear-gradient(to bottom right, rgba(180, 255, 251, 0.568), rgba(255, 163, 243, 0.568));
+  filter: blur(5px);
+  z-index: -1;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .body .card .card-body .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .body .card .card-body .heading .cardHeading {
+  font-weight: 600;
+  font-size: 18px;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .body .card .card-body .heading .circles {
+  position: relative;
+  width: 45px;
+  height: 30px;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .body .card .card-body .heading .circles .circle1 {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  background-color: rgba(255, 163, 243, 0.726);
+  padding: 10px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .body .card .card-body .heading .circles .circle2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(180, 255, 251, 0.562);
+  padding: 10px;
+  border-radius: 50%;
+  width: 10px;
+  height: 30px;
+  width: 30px;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .body .card .card-body .cardNumber {
+  font-weight: 600;
+  font-size: 25px;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .body .card .card-body .aboutCard {
+  font-weight: 500;
+  font-size: 15px;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .body .accept {
+  margin-top: 10px;
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .body .accordion .accordion-item .accordion-header .accordion-button {
+  color: #e92b2b;
+  background-color: rgba(233, 43, 43, 0.0745098039);
+}
+.App main .profileMain .profile .profileBody .profileWrapper .body .accordion .accordion-item .accordion-header .accordion-button:focus {
+  box-shadow: rgba(233, 43, 43, 0.5607843137);
+  border-color: rgba(233, 43, 43, 0.5607843137);
+}
+.App main .profileMain .profile .profileBody .profileWrapper .body .accordion .accordion-item .accordion-body .totalBill button {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .modal .formBody .formRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .modal .formBody .formRow label {
+  width: 30%;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .modal .formBody .formRow .formInput {
+  width: 70%;
+  display: inline;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .modal .formBody .formRow .formInput input {
+  width: 100%;
+  border: 1px solid #a1a0a0;
+  height: 35px;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+}
+.App main .profileMain .profile .profileBody .profileWrapper .modal .modal-footer button {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
 .App .greet .greetWrapper {
   display: flex;
   justify-content: center;
@@ -4362,6 +4574,9 @@ p {
   }
   main .insurance .insuranceBanner .banner .bannerInner .bannerText {
     padding: 50px 0 0 0;
+  }
+  main .profileMain .profile .profileBody .profileWrapper .body .card {
+    width: 100% !important;
   }
 }
 @media only screen and (max-width: 576px) {

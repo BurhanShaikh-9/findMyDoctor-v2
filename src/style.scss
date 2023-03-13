@@ -5410,7 +5410,225 @@ p {
                             }
                         }
                     }
+
+                    .profileWrapper {
+                        .header {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            gap: 20px;
+                            margin-bottom: 30px;
+
+                            .mainHeading {
+                                font-weight: 600;
+                                font-size: 30px;
+                            }
+
+                            .headerButton {
+                                button {
+
+                                    @include redButton();
+                                    width: 190px;
+                                }
+
+                                a {
+                                    @include redButton();
+                                    width: 175px;
+                                }
+                            }
+                        }
+
+                        .body {
+                            position: relative;
+
+                            .table-responsive {
+                                .table {
+                                    font-size: 14px;
+
+                                    thead {
+                                        tr {
+                                            border-color: #1e1428;
+
+                                            th {
+                                                color: #a1a0a0;
+                                                font-weight: 500;
+                                            }
+                                        }
+
+                                    }
+
+                                    tbody {
+
+                                        tr {
+                                            td {
+                                                min-width: 80px;
+
+                                                .edit {
+                                                    color: grey;
+                                                    font-size: 14px;
+                                                    margin-left: 10px;
+                                                }
+
+                                                .delete {
+                                                    background-color: #e92b2b;
+                                                    color: white;
+                                                    border-radius: 50%;
+                                                    padding: 4px 7px;
+                                                    font-size: 14px;
+                                                    margin-left: 10px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .card {
+                                border-radius: 25px;
+                                width: 50%;
+                                border: none;
+                                background-image: linear-gradient(to bottom right, rgb(180, 255, 251), rgb(255, 163, 243));
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    inset: -0.625em;
+                                    width: 450px;
+                                    height: 200px;
+                                    left: 27px;
+                                    border-radius: 20px;
+                                    top: 35px;
+                                    background: linear-gradient(to bottom right, rgba(180, 255, 251, 0.568), rgba(255, 163, 243, 0.568));
+                                    filter: blur(5px);
+                                    z-index: -1;
+                                }
+
+                                .card-body {
+                                    .heading {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        margin-bottom: 100px;
+
+                                        .cardHeading {
+                                            font-weight: 600;
+                                            font-size: 18px;
+                                        }
+
+                                        .circles {
+                                            position: relative;
+
+                                            width: 45px;
+                                            height: 30px;
+
+
+                                            .circle1 {
+                                                position: absolute;
+                                                top: 0;
+                                                right: 16px;
+                                                background-color: rgba(255, 163, 243, 0.726);
+                                                padding: 10px;
+                                                border-radius: 50%;
+                                                height: 30px;
+                                                width: 30px;
+                                            }
+
+                                            .circle2 {
+                                                position: absolute;
+                                                top: 0;
+                                                right: 0;
+                                                background-color: rgba(180, 255, 251, 0.562);
+                                                padding: 10px;
+                                                border-radius: 50%;
+                                                width: 10px;
+                                                height: 30px;
+                                                width: 30px;
+                                            }
+                                        }
+                                    }
+
+                                    .cardNumber {
+                                        font-weight: 600;
+                                        font-size: 25px;
+                                    }
+
+                                    .aboutCard {
+                                        font-weight: 500;
+                                        font-size: 15px;
+                                    }
+                                }
+                            }
+
+                            .accept {
+                                margin-top: 10px;
+                                @include redButton;
+                            }
+
+                            .accordion {
+                                .accordion-item {
+                                    .accordion-header {
+                                        .accordion-button {
+                                            color: #e92b2b;
+                                            background-color: #e92b2b13;
+                                            &:focus{
+                                                box-shadow: #e92b2b8f;
+                                                border-color: #e92b2b8f;
+                                            }
+                                        }
+                                    }
+                                    .accordion-body{
+                                        .totalBill{
+                                            button{
+                                                @include redButton;
+                                            }
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+
+                        .modal {
+                            .formBody {
+                                .formRow {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    flex-wrap: wrap;
+                                    margin-bottom: 20px;
+
+                                    // gap: ;
+                                    label {
+                                        width: 30%;
+                                    }
+
+                                    .formInput {
+                                        width: 70%;
+                                        display: inline;
+
+                                        input {
+                                            width: 100%;
+                                            border: 1px solid #a1a0a0;
+                                            height: 35px;
+                                            border-radius: 5px;
+                                            padding: 5px;
+                                            outline: none;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .modal-footer {
+                                button {
+
+                                    @include redButton;
+                                }
+                            }
+                        }
+                    }
                 }
+
             }
 
 
@@ -5589,12 +5807,14 @@ p {
                         display: flex;
                         gap: 10px;
                         overflow-x: auto;
-                        li{
-                            a{
+
+                        li {
+                            a {
                                 display: block;
                                 padding: 10px !important;
                             }
-                            .active{
+
+                            .active {
                                 background-color: #e92b2b;
                                 color: white;
                                 display: block;
@@ -5602,7 +5822,7 @@ p {
                                 border-radius: 10px;
                                 padding: 10px;
                             }
-                            
+
                         }
                     }
                 }
@@ -5761,6 +5981,20 @@ p {
                     .bannerInner {
                         .bannerText {
                             padding: 50px 0 0 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .profileMain {
+            .profile {
+                .profileBody {
+                    .profileWrapper {
+                        .body {
+                            .card {
+                                width: 100% !important;
+                            }
                         }
                     }
                 }
