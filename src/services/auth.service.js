@@ -18,11 +18,12 @@ const AuthService = () => {
     if (res?.data?.success) {
       let token = res?.data?.token;
       let userName = res?.data?.data?.fullname;
+      let id = res?.data?.data?.id;
       userToken(token);
       // window.location.href = document.referrer;
       navigate(ROUTING.HOMEPAGE)
       window.location.reload();
-      setUserObject(userName)
+      setUserObject(userName, id)
     }
     else {
 
@@ -30,7 +31,6 @@ const AuthService = () => {
 
     }
   }
-  // User Login Ends
 
   // User Register Starts
   const handleRegister = (data) => {
@@ -41,10 +41,18 @@ const AuthService = () => {
       navigate(ROUTING.LOGIN)
     }
   }
-  // User Register Ends
 
+  //user Profile
+  const profileUpdate = (data) => {
+    return axios.patch(`${baseUrl}/user-meta`, data)
+  }
 
-  return { handleLogin, handleRegister, onSuccessLogin, OnSuccessRegister }
+  //get User
+  const getUserData = (data) =>{
+    return axios.get(`${baseUrl}/user-meta`, data)
+  }
+
+  return { handleLogin, handleRegister, onSuccessLogin, OnSuccessRegister, getUserData }
 }
 
 export default AuthService

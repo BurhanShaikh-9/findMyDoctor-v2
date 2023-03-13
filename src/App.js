@@ -32,12 +32,13 @@ import { Billing } from './webpage/profile/profilePages/billing';
 import { Payment } from './webpage/profile/profilePages/payment';
 import { Logout } from './webpage/profile/profilePages/logout';
 import { Prescibtion } from './webpage/profile/profilePages/prescibtion';
+import { PrivacyPolicy } from './webpage/Policies/privacyPolicy';
+import { ShippingPolicy } from './webpage/Policies/shippingPolicy';
+import { ReturnPolicy } from './webpage/Policies/returnPolicy';
 function App() {
-  const { getToken, clearToken, getUserObject } = tokenService();
+  const { getToken, getUserName} = tokenService();
   const [userToken, setUserToken] = useState(getToken());
-  const [username, setUserName] = useState(getUserObject())
-
-
+  const [username, setUserName] = useState(getUserName());
   return (
     <div className="App">
 
@@ -55,10 +56,10 @@ function App() {
             <Route path={ROUTING.BRANDS} element={<Brands />} />
             <Route path={ROUTING.PRODUCT_ITEM} element={<ProductItem />} />
             <Route path={ROUTING.CART} element={<Cart />} />
-            <Route path={ROUTING.CHECKOUT} element={<CheckOut />}></Route>
+            <Route path={ROUTING.CHECKOUT} element={<CheckOut />}/>
           </Route>
-          <Route path={ROUTING.CONTACT} element={<Contact />}></Route>
-          <Route path={ROUTING.ABOUTUS} element={<Aboutus />}></Route>
+          <Route path={ROUTING.CONTACT} element={<Contact />}/>
+          <Route path={ROUTING.ABOUTUS} element={<Aboutus />}/>
           <Route path={ROUTING.PROFILE} element={<ProfileLayout />}>
             <Route path={ROUTING.MYPROFILE} element={<Myprofile />}/>
             <Route path={ROUTING.BENEFICIARY} element={<Beneficiary />}/>
@@ -71,7 +72,9 @@ function App() {
           </Route>
           <Route path={ROUTING.LOGIN} element={<Login />} />
           <Route path={ROUTING.SIGNUP} element={<Signup />} />
-          {/* <Route path={ROUTING.THANKYOU} element={Greeting}></Route> */}
+          <Route path={ROUTING.PRIVACY_POLICY} element={<PrivacyPolicy />}/>
+          <Route path={ROUTING.SHIPPING_POLICY} element={<ShippingPolicy />}/>
+          <Route path={ROUTING.RETURN_POLICY} element={<ReturnPolicy />}/>
         </Route>
       </Routes>
 

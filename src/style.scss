@@ -5394,8 +5394,8 @@ p {
                                         }
 
                                         img {
-                                            width: 80px;
-                                            height: 80px;
+                                            width: 70px;
+                                            height: 70px;
                                             object-fit: cover;
                                             border-radius: 50%;
                                             margin-right: 50%;
@@ -5571,15 +5571,17 @@ p {
                                         .accordion-button {
                                             color: #e92b2b;
                                             background-color: #e92b2b13;
-                                            &:focus{
+
+                                            &:focus {
                                                 box-shadow: #e92b2b8f;
                                                 border-color: #e92b2b8f;
                                             }
                                         }
                                     }
-                                    .accordion-body{
-                                        .totalBill{
-                                            button{
+
+                                    .accordion-body {
+                                        .totalBill {
+                                            button {
                                                 @include redButton;
                                             }
                                         }
@@ -5633,6 +5635,64 @@ p {
 
 
         }
+
+        .policy {
+            margin-bottom: 50px;
+            transition: opacity 1s ease;
+
+            .policyBanner {
+                .banner {
+
+                    .bannerText {
+                        background-image: url(assets/images/privacyBg.png);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                        border-radius: 0 0 70px 70px;
+                        border-bottom: 8px solid #e92b2b;
+                        padding: 170px 0 0 0;
+
+                        .bannerInfo {
+                            height: 150px;
+                            text-align: center;
+
+                            p {
+                                font-family: 'poppinExtraBold';
+                                font-size: 50px;
+
+                                span {
+                                    color: #e92b2b;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .policyMain {
+                .card {
+                    margin-top: 50px;
+                    .card-body {
+                        .paragraphs {
+                            .mainHeading {
+                                font-weight: 700px;
+                                font-size: 25px; 
+                                margin-bottom: 10px;
+                                margin-top: 20px;
+                            }
+                            .normalPara{
+                                font-size: 14px;
+                               
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+
     }
 
     .greet {

@@ -4197,8 +4197,8 @@ p {
   padding: 5px 10px;
 }
 .App main .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField img {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
@@ -4419,6 +4419,42 @@ p {
   background-repeat: no-repeat;
   font-size: 14px;
   background-position: -110px 0;
+}
+.App main .policy {
+  margin-bottom: 50px;
+  transition: opacity 1s ease;
+}
+.App main .policy .policyBanner .banner .bannerText {
+  background-image: url(assets/images/privacyBg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 70px 70px;
+  border-bottom: 8px solid #e92b2b;
+  padding: 170px 0 0 0;
+}
+.App main .policy .policyBanner .banner .bannerText .bannerInfo {
+  height: 150px;
+  text-align: center;
+}
+.App main .policy .policyBanner .banner .bannerText .bannerInfo p {
+  font-family: "poppinExtraBold";
+  font-size: 50px;
+}
+.App main .policy .policyBanner .banner .bannerText .bannerInfo p span {
+  color: #e92b2b;
+}
+.App main .policy .policyMain .card {
+  margin-top: 50px;
+}
+.App main .policy .policyMain .card .card-body .paragraphs .mainHeading {
+  font-weight: 700px;
+  font-size: 25px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.App main .policy .policyMain .card .card-body .paragraphs .normalPara {
+  font-size: 14px;
 }
 .App .greet .greetWrapper {
   display: flex;

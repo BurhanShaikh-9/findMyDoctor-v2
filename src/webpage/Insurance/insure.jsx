@@ -160,7 +160,6 @@ export const Insure = () => {
                                 </div>
                             </div>
                         </div>
-
                     </section>
                     <div className="switchDiv firstSwitchDiv" ref={buttonRef1}>
                         <section>

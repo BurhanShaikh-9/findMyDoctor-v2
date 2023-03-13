@@ -27,5 +27,8 @@ export const ROUTING = {
     BILLING:"/profile/billing",
     PAYMENT:"/profile/payment",
     LOGOUT:"/profile/logout",
+    PRIVACY_POLICY:"privacy-policy",
+    SHIPPING_POLICY:"shipping-policy",
+    RETURN_POLICY:"return-policy",
 
 }

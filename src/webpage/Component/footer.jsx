@@ -59,12 +59,12 @@ export const Footer = () => {
                   <Link to={ROUTING.PHARMACY}>Pharmacy</Link>
                   <Link to={ROUTING.ABOUTUS}>About Us</Link>
                   <Link to={ROUTING.CONTACT}>Contact Us</Link>
-                  <Link to="">Privacy Policy</Link>
+                  <Link to={ROUTING.PRIVACY_POLICY}>Privacy Policy</Link>
                   </div>
                   <div>
-                    <a>Shipping Policy</a>
-                    <a>Return Policy</a>
-                    <a>Faq's</a>
+                    <Link to={ROUTING.SHIPPING_POLICY} >Shipping Policy</Link>
+                    <Link to={ROUTING.RETURN_POLICY}>Return Policy</Link>
+                    <Link>Faq's</Link>
                   </div>
                 </div>
               </div>
