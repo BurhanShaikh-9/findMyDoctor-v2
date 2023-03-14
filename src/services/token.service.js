@@ -1,31 +1,35 @@
 
 const tokenService = () => {
 
-    const userToken = (token) =>{
+    const userToken = (token) => {
         localStorage.setItem("token", JSON.stringify(token));
     }
-    const getToken = () =>{
+    const getToken = () => {
         return localStorage.getItem("token");
     }
 
-    const setUserObject = (user, id) =>{
-        localStorage.setItem("user", JSON.stringify(user));
-        localStorage.setItem("userId",JSON.stringify(id));
-    }
-    const getUserName = () =>{
-        return localStorage.getItem("user");
-    }
-    const getUserId = () =>{
-        return localStorage.getItem("userId");
+    const setUserObject = (data) => {
+        localStorage.setItem("data", JSON.stringify(data));
+
     }
 
-    const clearToken =() =>{
+    // const setUserObject1 = (data) => {
+    //     localStorage.setItem("data", JSON.stringify(data));
+    // }
+    const getStorageData = () => {
+        const savedDataString = localStorage.getItem("data");
+        const savedData = JSON.parse(savedDataString);
+        return savedData;
+    }
+
+
+    const clearToken = () => {
         localStorage.clear();
         window.location.reload();
     }
-    
-    return {userToken, setUserObject, getUserName, clearToken, getToken, getUserId}
-    
+
+    return { userToken, setUserObject, getStorageData, clearToken, getToken }
+
 }
 
 export default tokenService

@@ -4,35 +4,70 @@ import AuthService from '../../../services/auth.service';
 import tokenService from '../../../services/token.service';
 
 export const Myprofile = () => {
-    const {getUserId} = tokenService();
-    const {getUserData} = AuthService();
-      const [userId, setUserId] = useState(getUserId());
-      console.log(userId)
-    const [formData, setFormData] = useState(new FormData());
-    
+    const { getStorageData } = tokenService();
+    const { getUserData, patchUserData } = AuthService();
+    const myData = getStorageData();
+    const [profileImage, setProfileImage] = useState();
+    const [profileData, setProfileData] = useState({
+        fullname: myData.fullname,
+        email: myData.email,
+        phone: myData.phone,
+    })
+    const [profileMetaData, setProfileMetaData] = useState({
+        fullname: myData.fullname,
+        email: myData.email,
+        phone: myData.phone,
+        address: "",
+        age: "",
+        weight: "",
+        height: "",
+    });
+
 
     //get Input from Form
     const getInput = (e) => {
         const name = e.target.name;
         const value = e.target.value;
-        formData.set(name, value);
+        setProfileMetaData({ ...profileMetaData, [name]: value })
+        setProfileData({ ...profileData, [name]: value })
+    }
+    const getImgInput = (e) => {
+        const file = e.target.files[0];
+        setProfileImage(file)
     }
 
     //Form Submition after Taking Input
     const formSubmit = (e) => {
         e.preventDefault();
-        formData.set("id", userId)
-        for(let obj of formData){
-            console.log(obj)
+
+        //adding MetaData to formData
+        const formData = new FormData();
+        formData.set("address", profileMetaData.address)
+        formData.set("height", profileMetaData.height)
+        formData.set("weight", profileMetaData.weight)
+        formData.set("age", profileMetaData.age)
+        formData.set("image", profileImage)
+        for (const obj of formData.entries()) {
+            console.log(obj[0] + ': ' + obj[1]);
         }
+
+        //adding MainData to formData
+        const userData = { ...profileData }
+        patchUserData(userData).then((res) => {
+            console.log(res)
+        }).catch((err) => {
+            console.log(err.message)
+        })
+        
+        console.log(userData)
+
     }
 
-    useEffect(()=>{
-        getUserData(userId).then((res => {
+    useEffect(() => {
+        getUserData(myData.id).then((res => {
             console.log(res)
         }))
-      
-    })
+    }, [getUserData])
 
     return (
         <>
@@ -51,13 +86,9 @@ export const Myprofile = () => {
                         </div>
                         <div className="profileDetails">
                             <div className="profileName px-3 pt-2">
-                                <h4 className="textPrimary mb-0">Mitchell C. Shay</h4>
+                                <h4 className="textPrimary mb-0">{myData.fullname}</h4>
                                 <p>Update and personalize your details</p>
                             </div>
-                            <div className='editButton'>
-                                <button>Edit</button>
-                            </div>
-
                         </div>
                     </div>
                 </div>
@@ -66,7 +97,7 @@ export const Myprofile = () => {
                         <div className="fields">
                             <label htmlFor="userName">Name</label>
                             <div className='inputField'>
-                                <input type="text" id='userName' autoComplete='off' value="" name='name' onChange={getInput} />
+                                <input type="text" id='userName' autoComplete='off' name='fullname' placeholder={myData.fullname} onChange={getInput} />
                             </div>
 
                         </div>
@@ -74,7 +105,7 @@ export const Myprofile = () => {
                         <div className="fields">
                             <label htmlFor="number">Phone Number</label>
                             <div className='inputField'>
-                                <input type="text" id='number' autoComplete='off' value="" name='phone' onChange={getInput} />
+                                <input type="text" id='number' autoComplete='off' name='phone' placeholder={myData.phone} onChange={getInput} />
                             </div>
 
                         </div>
@@ -82,7 +113,7 @@ export const Myprofile = () => {
                         <div className="fields">
                             <label htmlFor="email">Email</label>
                             <div className='inputField'>
-                                <input type="text" id='email' autoComplete='off' value="" name='email' onChange={getInput}/>
+                                <input type="text" id='email' autoComplete='off' name='email' placeholder={myData.email} onChange={getInput} />
                             </div>
 
                         </div>
@@ -90,7 +121,7 @@ export const Myprofile = () => {
                         <div className="fields">
                             <label htmlFor="address">Address</label>
                             <div className='inputField'>
-                                <textarea type="text" id='address' autoComplete='off' rows={2} placeholder="Enter Address..." name='address' onChange={getInput}/>
+                                <textarea type="text" id='address' autoComplete='off' rows={2} placeholder="Enter Address..." name='address' onChange={getInput} />
                             </div>
                         </div>
                         <hr />
@@ -98,29 +129,29 @@ export const Myprofile = () => {
                             <label htmlFor="address">Image</label>
                             <div className='inputField'>
                                 <img src={personImg} alt="" />
-                                <input type="file" accept="image/*" name='image' onChange={getInput}/>
-                                <button>Update</button>
+                                <input id='dpImageUpload' type="file" accept="image/*" name='image' onChange={getImgInput} />
+                                <label htmlFor='dpImageUpload'>Update</label>
                             </div>
                         </div>
                         <hr />
                         <div className="fields">
                             <label htmlFor="age">Age</label>
                             <div className='inputField'>
-                                <input type="text" id='age' autoComplete='off' onChange={getInput}/>
+                                <input type="text" id='age' autoComplete='off' name='age' onChange={getInput} />
                             </div>
                         </div>
                         <hr />
                         <div className="fields">
                             <label htmlFor="age">Height</label>
                             <div className='inputField'>
-                                <input type="text" id='age' autoComplete='off' onChange={getInput}/>
+                                <input type="text" id='age' autoComplete='off' name='height' onChange={getInput} />
                             </div>
                         </div>
                         <hr />
                         <div className="fields">
                             <label htmlFor="age">Weight</label>
                             <div className='inputField'>
-                                <input type="text" id='age' autoComplete='off' onChange={getInput}/>
+                                <input type="text" id='age' autoComplete='off' name='weight' onChange={getInput} />
                             </div>
                         </div>
                         <hr />

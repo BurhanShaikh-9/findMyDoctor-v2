@@ -5,15 +5,15 @@ import { ROUTING } from '../../utils/routes';
 import tokenService from '../../services/token.service'
 import { useState } from 'react';
 export const Header = (props) => {
-    const { clearToken } = tokenService();
+    const { clearToken, getStorageData } = tokenService();
     // const [userLogged, setUserLogged] = useState(false)
     const [userToken, setUserToken] = useState(false);
     const [username, setUserName] = useState('')
+    const myData = getStorageData();
 
     useEffect(() => {
-        setUserName(props.userName)
         setUserToken(props.userLoggedIn)
-    }, [username, userToken]);
+    }, [userToken]);
 
     const handleSignOut = () => {
 
@@ -61,7 +61,7 @@ export const Header = (props) => {
                                 <div className="userProfileDiv">
                                     <div className="dropdown">
                                         <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i className="ri-user-line"></i> {username}
+                                            <i className="ri-user-line"></i> {myData.fullname}
                                         </button>
                                         <ul className="dropdown-menu">
                                             <li><Link className="dropdown-item" to={ROUTING.PROFILE}>User Profile</Link></li>
@@ -123,7 +123,7 @@ export const Header = (props) => {
                                             <div className="userProfileDiv">
                                                 <div className="dropdown">
                                                     <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i className="ri-user-line"></i> {username}
+                                                        <i className="ri-user-line"></i> {myData.fullname}
                                                     </button>
                                                     <ul className="dropdown-menu">
                                                         <li><Link className="dropdown-item" to={ROUTING.PROFILE}>User Profile</Link></li>

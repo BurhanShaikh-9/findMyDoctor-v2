@@ -36,14 +36,13 @@ import { PrivacyPolicy } from './webpage/Policies/privacyPolicy';
 import { ShippingPolicy } from './webpage/Policies/shippingPolicy';
 import { ReturnPolicy } from './webpage/Policies/returnPolicy';
 function App() {
-  const { getToken, getUserName} = tokenService();
+  const { getToken} = tokenService();
   const [userToken, setUserToken] = useState(getToken());
-  const [username, setUserName] = useState(getUserName());
   return (
     <div className="App">
 
       <Routes>
-        <Route element={<Layout userLogged={userToken ? true : false} userName={username} />}>
+        <Route element={<Layout userLogged={userToken ? true : false}/>}>
           <Route path={ROUTING.HOMEPAGE} element={<HomePage />} />
           <Route path={ROUTING.BOOK_DOCTOR} element={<BookDoctor />} />
           <Route path={ROUTING.BOOK_LAB} element={<BookLab />} />

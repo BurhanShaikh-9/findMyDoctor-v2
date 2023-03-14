@@ -4176,6 +4176,21 @@ p {
   justify-content: flex-start;
   align-items: center;
 }
+.App main .profileMain .profile .profileBody .profileInner form .profileForm .fields button {
+  display: block;
+  width: 150px;
+  background-color: #e92b2b;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
 .App main .profileMain .profile .profileBody .profileInner form .profileForm .fields label {
   width: 40%;
 }
@@ -4183,11 +4198,19 @@ p {
   display: inline-block;
   width: 60%;
 }
+.App main .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField label {
+  display: inline;
+  color: grey;
+  cursor: pointer;
+}
 .App main .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField input {
   border: 1px solid grey;
   width: 80%;
   border-radius: 10px;
   padding: 5px 10px;
+}
+.App main .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField input[type=file] {
+  display: none;
 }
 .App main .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField textarea {
   resize: none;
@@ -4613,6 +4636,16 @@ p {
   }
   main .profileMain .profile .profileBody .profileWrapper .body .card {
     width: 100% !important;
+  }
+  main .profileMain .profile .profileBody .profileInner .profileHead .profileInfo .profilePhoto {
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+  main .profileMain .profile .profileBody .profileInner .profileHead .profileInfo .profileDetails {
+    margin-left: 0 !important;
+    margin-top: 87px;
+    text-align: center;
+    display: block !important;
   }
 }
 @media only screen and (max-width: 576px) {
