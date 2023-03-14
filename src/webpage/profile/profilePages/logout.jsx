@@ -1,6 +1,18 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
+import tokenService from '../../../services/token.service';
+import { ROUTING } from '../../../utils/routes';
+
 
 export const Logout = () => {
+  const navigate = useNavigate();
+  const { clearToken } = tokenService();
+  const handleSignOut = () => {
+    navigate(ROUTING.HOMEPAGE)
+    clearToken();
+}
+
+
   return (
     <>
        <div className="profileWrapper">
@@ -11,7 +23,7 @@ export const Logout = () => {
         </div>
         <div className="body">
           <p className='mainPara'>Are you sure you want to Logout?</p>
-          <button className='accept'>Yes</button>
+          <button className='accept' onClick={handleSignOut}>Yes</button>
         </div>
       </div>
     </>
