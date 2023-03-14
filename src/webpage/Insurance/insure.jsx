@@ -172,9 +172,9 @@ export const Insure = () => {
                                         </h1>
                                     </div>
                                     <div className="mainBodyInner">
-                                        <div className="row wrapper ">
+                                    <div className="rowButton wrapper ">
 
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 " align="center">
+                                    <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="heartId" name="takafulType" value="InsuranceMarket" onChange={getInsuranceInput} selected />
                                                     <label className="radio-button" htmlFor="heartId">
@@ -187,7 +187,7 @@ export const Insure = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="kidneyId" name="takafulType" value="roshanDigital" onChange={getInsuranceInput} />
                                                     <label className="radio-button" htmlFor="kidneyId">
@@ -198,7 +198,7 @@ export const Insure = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="orthoId" name="takafulType" value="sehatCard" onChange={getInsuranceInput} />
                                                     <label className="radio-button" htmlFor="orthoId">
@@ -244,9 +244,9 @@ export const Insure = () => {
                                         </h1>
                                     </div>
                                     <div className="mainBodyInner">
-                                        <div className="row wrapper ">
+                                    <div className="rowButton wrapper ">
 
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 " align="center">
+                                        <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="heartId" name="takafulType" value="InsuranceMarket" onChange={getInsuranceInput} selected />
                                                     <label className="radio-button" htmlFor="heartId">
@@ -259,7 +259,7 @@ export const Insure = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="kidneyId" name="takafulType" value="roshanDigital" onChange={getInsuranceInput} />
                                                     <label className="radio-button" htmlFor="kidneyId">
@@ -393,9 +393,9 @@ export const Insure = () => {
                                         </h1>
                                     </div>
                                     <div className="mainBodyInner">
-                                        <div className="row wrapper ">
+                                        <div className="rowButton wrapper ">
 
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 " align="center">
+                                        <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="jubileeId" name="providerType" onChange={getInsuranceInput} value="jubilee" selected />
                                                     <label className="radio-button" htmlFor="jubileeId">
@@ -406,7 +406,7 @@ export const Insure = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="efuId" name="providerType" onChange={getInsuranceInput} value="efuLife" />
                                                     <label className="radio-button" htmlFor="efuId">
@@ -418,7 +418,7 @@ export const Insure = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="adamId" name="providerType" onChange={getInsuranceInput} value="adamJee" />
                                                     <label className="radio-button" htmlFor="adamId">
@@ -430,7 +430,7 @@ export const Insure = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton '>
                                                     <input type="radio" id="alfalahId" name="providerType" onChange={getInsuranceInput} value="alfalah" />
                                                     <label className="radio-button " htmlFor="alfalahId">
@@ -477,12 +477,12 @@ export const Insure = () => {
                                         </h1>
                                     </div>
                                     <div className="mainBodyInner">
-                                        <div className="row wrapper ">
+                                    <div className="rowButton wrapper ">
 
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 " align="center">
+                                        <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="plan1" name="planning" value="planA" onChange={getInsuranceInput} />
-                                                    <label className="radio-button" htmlFor="plan1">
+                                                    <label className="radio-button radioplan" htmlFor="plan1">
                                                         <div className="imgDiv">
                                                             <div className="imgPlan">
                                                                 <img src={diamond} />
@@ -534,10 +534,10 @@ export const Insure = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton radioButton1'>
                                                     <input type="radio" id="plan2" name="planning" value="planB" onChange={getInsuranceInput} />
-                                                    <label className="radio-button" htmlFor="plan2">
+                                                    <label className="radio-button radioplan" htmlFor="plan2">
                                                         <div className="imgDiv">
                                                             <div className="imgPlan">
                                                                 <img src={diamond} />
@@ -589,10 +589,10 @@ export const Insure = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton radioButton1'>
                                                     <input type="radio" id="plan3" name="planning" value="planC" onChange={getInsuranceInput} />
-                                                    <label className="radio-button" htmlFor="plan3">
+                                                    <label className="radio-button radioplan" htmlFor="plan3">
                                                         <div className="imgDiv">
                                                             <div className="imgPlan">
                                                                 <img src={diamond} />
@@ -678,9 +678,9 @@ export const Insure = () => {
                                         </h1>
                                     </div>
                                     <div className="mainBodyInner">
-                                        <div className="row wrapper ">
+                                        <div className="rowButton wrapper ">
 
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 " align="center">
+                                        <div className="columnButtons">
                                                 <div className='checkBoxButton'>
                                                     <input type="checkbox" className='checkBoxButtonClass' id="member1" name="members" value="parents" onChange={handleMembers} />
                                                     <label className="radio-button" htmlFor="member1">
@@ -692,7 +692,7 @@ export const Insure = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='checkBoxButton'>
                                                     <input type="checkbox" className='checkBoxButtonClass' id="member2" name="members" value="wife" onChange={handleMembers} />
                                                     <label className="radio-button" htmlFor="member2">
@@ -704,7 +704,7 @@ export const Insure = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='checkBoxButton'>
                                                     <input type="checkbox" className='checkBoxButtonClass' id="member3" name="members" value="son" onChange={handleMembers} />
                                                     <label className="radio-button" htmlFor="member3">
@@ -750,9 +750,9 @@ export const Insure = () => {
                                         </h1>
                                     </div>
                                     <div className="mainBodyInner">
-                                        <div className="row wrapper ">
+                                        <div className="rowButton wrapper ">
 
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 " align="center">
+                                        <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="cardId" name="paymentMethod" value="card" onChange={getInsuranceInput} />
                                                     <label className="radio-button" htmlFor="cardId">
@@ -764,7 +764,7 @@ export const Insure = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="bankId" name="paymentMethod" value="bank" onChange={getInsuranceInput} />
                                                     <label className="radio-button" htmlFor="bankId">

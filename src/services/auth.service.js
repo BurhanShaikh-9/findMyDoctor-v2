@@ -6,10 +6,14 @@ import { toast } from 'react-toastify';
 import tokenService from './token.service';
 
 const AuthService = () => {
+  const { userToken, setUserObject, getToken } = tokenService();
   const navigate = useNavigate();
+  const token =  getToken()
   const baseUrl = 'https://fmd.arraydigitals.com/api';
-  const { userToken, setUserObject } = tokenService();
-
+  const headers = {
+    Authorization: `Bearer ${token}`
+  };
+ 
   //USER REGISTRATION STARTS
   // User Login Starts
   const handleLogin = (data) => {
@@ -40,8 +44,9 @@ const AuthService = () => {
   //USER REGISTRATION ENDS
 
   //Update USER DATA
+
   const patchUserData = (data) =>{
-    return axios.patch(`${baseUrl}/users/update`, data)
+    return axios.patch(`${baseUrl}/users/update`,{data}, {headers}, )
   }
 
   //USER META DATA STARTS
@@ -51,7 +56,7 @@ const AuthService = () => {
   }
   //Update UserMetaData
   const updateUserMeta = (data) => {
-    return axios.patch(`${baseUrl}/user-meta`, data)
+    return axios.patch(`${baseUrl}/user-meta`,  data)
   }
   //get UserMetaData
   const getUserData = (data) => {

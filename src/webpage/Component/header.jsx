@@ -61,7 +61,7 @@ export const Header = (props) => {
                                 <div className="userProfileDiv">
                                     <div className="dropdown">
                                         <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i className="ri-user-line"></i> {myData.fullname}
+                                            <i className="ri-user-line"></i> {myData?.fullname}
                                         </button>
                                         <ul className="dropdown-menu">
                                             <li><Link className="dropdown-item" to={ROUTING.PROFILE}>User Profile</Link></li>
@@ -123,7 +123,7 @@ export const Header = (props) => {
                                             <div className="userProfileDiv">
                                                 <div className="dropdown">
                                                     <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i className="ri-user-line"></i> {myData.fullname}
+                                                        <i className="ri-user-line"></i> {myData?.fullname}
                                                     </button>
                                                     <ul className="dropdown-menu">
                                                         <li><Link className="dropdown-item" to={ROUTING.PROFILE}>User Profile</Link></li>

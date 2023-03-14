@@ -811,6 +811,12 @@ p {
   font-family: "poppinExtraBold";
   color: #e92b2b;
 }
+.App main .bookDoctor .switchDiv .mainBody .mainBodyInner .rowButton {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
 .App main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .radioButton {
   margin-bottom: 30px;
 }
@@ -1123,6 +1129,12 @@ p {
 .App main .bookLab .switchDiv .mainBody .mainBodyHeading h1 span {
   font-family: "poppinExtraBold";
   color: #e92b2b;
+}
+.App main .bookLab .switchDiv .mainBody .mainBodyInner .rowButton {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 .App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .LabCarousel .LabCarouselInner {
   margin-bottom: 50px;
@@ -3044,6 +3056,15 @@ p {
   font-family: "poppinExtraBold";
   color: #e92b2b;
 }
+.App main .insurance .switchDiv .mainBody .mainBodyInner .rowButton {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .rowButton .columnButtons {
+  text-align: center;
+}
 .App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .checkBoxButton {
   margin-bottom: 30px;
 }
@@ -3202,7 +3223,7 @@ p {
 }
 .App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .radio-button {
   border: 1px solid #e92b2b;
-  width: 260px;
+  width: 225px;
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -3261,6 +3282,9 @@ p {
 }
 .App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .radio-button .imgDiv .duration small {
   font-size: 11px;
+}
+.App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton .radioplan {
+  width: 260px;
 }
 .App main .insurance .switchDiv .mainBody .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button {
   background-color: #e92b2b;

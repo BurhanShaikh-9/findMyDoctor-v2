@@ -5,7 +5,8 @@ const tokenService = () => {
         localStorage.setItem("token", JSON.stringify(token));
     }
     const getToken = () => {
-        return localStorage.getItem("token");
+        const getToken =  localStorage.getItem("token");
+        return getToken
     }
 
     const setUserObject = (data) => {
@@ -13,9 +14,6 @@ const tokenService = () => {
 
     }
 
-    // const setUserObject1 = (data) => {
-    //     localStorage.setItem("data", JSON.stringify(data));
-    // }
     const getStorageData = () => {
         const savedDataString = localStorage.getItem("data");
         const savedData = JSON.parse(savedDataString);

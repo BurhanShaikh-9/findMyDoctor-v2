@@ -1057,9 +1057,16 @@ p {
                     }
 
                     .mainBodyInner {
-
+                        .rowButton{
+                            display: flex;
+                            justify-content: center;
+                            gap: 30px;
+                            flex-wrap: wrap;
+                        }
                         .wrapper {
-
+                       
+                               
+                     
 
                             .radioButton {
                                 margin-bottom: 30px;
@@ -1476,6 +1483,12 @@ p {
                     }
 
                     .mainBodyInner {
+                        .rowButton{
+                            display: flex;
+                            justify-content: center;
+                            gap: 30px;
+                            flex-wrap: wrap;
+                        }
                         .wrapper {
                             .LabCarousel {
                                 .LabCarouselInner {
@@ -1675,7 +1688,6 @@ p {
 
                                 }
                             }
-
 
                             .selectDateTimePicker {
 
@@ -3965,6 +3977,15 @@ p {
                     }
 
                     .mainBodyInner {
+                        .rowButton{
+                            display: flex;
+                            justify-content: center;
+                            gap: 30px;
+                            flex-wrap: wrap;
+                            .columnButtons{
+                                text-align: center;
+                            }
+                        }
                         .wrapper {
 
                             .checkBoxButton {
@@ -4166,11 +4187,10 @@ p {
 
                                 .radio-button {
                                     border: 1px solid #e92b2b;
-                                    width: 260px;
+                                    width: 225px;
                                     border-radius: 20px;
                                     display: flex;
                                     justify-content: center;
-
                                     flex-direction: column;
                                     padding: 10px 10px 10px 10px;
                                     cursor: pointer;
@@ -4242,7 +4262,9 @@ p {
                                         }
                                     }
                                 }
-
+                                .radioplan{
+                                    width: 260px;
+                                }
 
 
                                 input[type="radio"]:checked+label.radio-button {
@@ -6223,6 +6245,8 @@ p {
                             }
                         }
                     }
+
+             
                 }
             }
 

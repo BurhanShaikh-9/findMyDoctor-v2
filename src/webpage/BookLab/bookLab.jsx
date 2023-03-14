@@ -191,8 +191,8 @@ export const BookLab = () => {
                                         </h1>
                                     </div>
                                     <div className="mainBodyInner">
-                                        <div className="row wrapper ">
-                                            <div className="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4" align="center">
+                                        <div className="rowButton wrapper ">
+                                        <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="option0" name="LabBookedFor" value="self" onChange={getLabInput} />
                                                     <label className="radio-button" htmlFor="option0">
@@ -203,7 +203,7 @@ export const BookLab = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="option1" name="LabBookedFor" value="parents" onChange={getLabInput} />
                                                     <label className="radio-button" htmlFor="option1">
@@ -214,7 +214,7 @@ export const BookLab = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 " align="center"    >
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="option2" name="LabBookedFor" value="family" onChange={getLabInput} />
                                                     <label className="radio-button" htmlFor="option2">

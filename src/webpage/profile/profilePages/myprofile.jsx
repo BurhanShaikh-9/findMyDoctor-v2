@@ -9,14 +9,14 @@ export const Myprofile = () => {
     const myData = getStorageData();
     const [profileImage, setProfileImage] = useState();
     const [profileData, setProfileData] = useState({
-        fullname: myData.fullname,
-        email: myData.email,
-        phone: myData.phone,
+        fullname: myData?.fullname,
+        email: myData?.email,
+        phone: myData?.phone,
     })
     const [profileMetaData, setProfileMetaData] = useState({
-        fullname: myData.fullname,
-        email: myData.email,
-        phone: myData.phone,
+        fullname: myData?.fullname,
+        email: myData?.email,
+        phone: myData?.phone,
         address: "",
         age: "",
         weight: "",
@@ -42,10 +42,10 @@ export const Myprofile = () => {
 
         //adding MetaData to formData
         const formData = new FormData();
-        formData.set("address", profileMetaData.address)
-        formData.set("height", profileMetaData.height)
-        formData.set("weight", profileMetaData.weight)
-        formData.set("age", profileMetaData.age)
+        formData.set("address", profileMetaData?.address)
+        formData.set("height", profileMetaData?.height)
+        formData.set("weight", profileMetaData?.weight)
+        formData.set("age", profileMetaData?.age)
         formData.set("image", profileImage)
         for (const obj of formData.entries()) {
             console.log(obj[0] + ': ' + obj[1]);
@@ -58,13 +58,13 @@ export const Myprofile = () => {
         }).catch((err) => {
             console.log(err.message)
         })
-        
+
         console.log(userData)
 
     }
 
     useEffect(() => {
-        getUserData(myData.id).then((res => {
+        getUserData(myData?.id).then((res => {
             console.log(res)
         }))
     }, [getUserData])
@@ -86,7 +86,7 @@ export const Myprofile = () => {
                         </div>
                         <div className="profileDetails">
                             <div className="profileName px-3 pt-2">
-                                <h4 className="textPrimary mb-0">{myData.fullname}</h4>
+                                <h4 className="textPrimary mb-0">{myData?.fullname}</h4>
                                 <p>Update and personalize your details</p>
                             </div>
                         </div>
@@ -97,7 +97,7 @@ export const Myprofile = () => {
                         <div className="fields">
                             <label htmlFor="userName">Name</label>
                             <div className='inputField'>
-                                <input type="text" id='userName' autoComplete='off' name='fullname' placeholder={myData.fullname} onChange={getInput} />
+                                <input type="text" id='userName' autoComplete='off' name='fullname' placeholder={myData?.fullname} value={profileData.fullname} onChange={getInput} required/>
                             </div>
 
                         </div>
@@ -105,7 +105,7 @@ export const Myprofile = () => {
                         <div className="fields">
                             <label htmlFor="number">Phone Number</label>
                             <div className='inputField'>
-                                <input type="text" id='number' autoComplete='off' name='phone' placeholder={myData.phone} onChange={getInput} />
+                                <input type="text" id='number' autoComplete='off' name='phone' placeholder={myData?.phone} value={profileData.phone} onChange={getInput} required/>
                             </div>
 
                         </div>
@@ -113,7 +113,7 @@ export const Myprofile = () => {
                         <div className="fields">
                             <label htmlFor="email">Email</label>
                             <div className='inputField'>
-                                <input type="text" id='email' autoComplete='off' name='email' placeholder={myData.email} onChange={getInput} />
+                                <input type="text" id='email' autoComplete='off' name='email' placeholder={myData?.email} value={profileData.email} onChange={getInput} required/>
                             </div>
 
                         </div>

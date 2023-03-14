@@ -150,7 +150,7 @@ export const BookDoctor = () => {
             paymentMethod: "Cash",
             cardNumber: "",
             promoCode: "",
-            address:"",
+            address: "",
         }
     )
 
@@ -174,14 +174,14 @@ export const BookDoctor = () => {
     useEffect(() => {
         setDateTime(BookingDate + ' ' + bookedTime)
     }, [date_time])
-    
+
     //removeing the fields from object if the opposite of it selected
     const handleRemoveField = () => {
         if (doctorBooking.typeOfAppointment === "physical") {
             const { specialistDoctor, ...updatedUsers } = doctorBooking;
             setDoctorBooking(updatedUsers);
         }
-        else if(doctorBooking.typeOfAppointment === "online"){
+        else if (doctorBooking.typeOfAppointment === "online") {
             const { doctorType, ...updatedUsers } = doctorBooking;
             setDoctorBooking(updatedUsers);
         }
@@ -227,8 +227,8 @@ export const BookDoctor = () => {
                                         </h1>
                                     </div>
                                     <div className="mainBodyInner">
-                                        <div className="row wrapper ">
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 " align='center'>
+                                        <div className="rowButton wrapper ">
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="option0" name="bookedFor" value="self" onChange={getInput} />
                                                     <label className="radio-button" htmlFor="option0">
@@ -239,7 +239,7 @@ export const BookDoctor = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 " align='center'>
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="option1" name="bookedFor" value="parent" onChange={getInput} />
                                                     <label className="radio-button" htmlFor="option1">
@@ -250,7 +250,7 @@ export const BookDoctor = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 " align='center'>
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="option2" name="bookedFor" value="family" onChange={getInput} />
                                                     <label className="radio-button" htmlFor="option2">
@@ -294,9 +294,9 @@ export const BookDoctor = () => {
                                         </h1>
                                     </div>
                                     <div className="mainBodyInner">
-                                        <div className="row wrapper ">
+                                        <div className="rowButton wrapper ">
 
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="onlineId" name="typeOfAppointment" value="online" onChange={getInput} />
                                                     <label className="radio-button" htmlFor="onlineId">
@@ -307,7 +307,7 @@ export const BookDoctor = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="physicalId" name="typeOfAppointment" value="physical" onChange={getInput} />
                                                     <label className="radio-button" htmlFor="physicalId">
@@ -352,9 +352,9 @@ export const BookDoctor = () => {
                                         </h1>
                                     </div>
                                     <div className="mainBodyInner">
-                                        <div className="row wrapper ">
+                                        <div className="rowButton wrapper ">
 
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="generalId" name="doctorType" value=" GeneralPhysician" onChange={getInput} />
                                                     <label className="radio-button" htmlFor="generalId">
@@ -365,7 +365,7 @@ export const BookDoctor = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="physioId" name="doctorType" value="physiotherapist" onChange={getInput} />
                                                     <label className="radio-button" htmlFor="physioId">
@@ -377,7 +377,7 @@ export const BookDoctor = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="nurseId" name="doctorType" value="nurse" onChange={getInput} />
                                                     <label className="radio-button" htmlFor="nurseId">
@@ -422,9 +422,9 @@ export const BookDoctor = () => {
                                         </h1>
                                     </div>
                                     <div className="mainBodyInner">
-                                        <div className="row wrapper ">
+                                    <div className="rowButton wrapper ">
 
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="heartId" name="specialistDoctor" value="Heart" onChange={getInput} />
                                                     <label className="radio-button" htmlFor="heartId">
@@ -435,7 +435,7 @@ export const BookDoctor = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="kidneyId" name="specialistDoctor" value="Kidney" onChange={getInput} />
                                                     <label className="radio-button" htmlFor="kidneyId">
@@ -447,7 +447,7 @@ export const BookDoctor = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="orthoId" name="specialistDoctor" value="orthopedist" onChange={getInput} />
                                                     <label className="radio-button" htmlFor="orthoId">
@@ -458,7 +458,7 @@ export const BookDoctor = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="eyeId" name="specialistDoctor" value="Eye" onChange={getInput} />
                                                     <label className="radio-button" htmlFor="eyeId">
@@ -469,7 +469,7 @@ export const BookDoctor = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="dentistId" name="specialistDoctor" value="Dentist" onChange={getInput} />
                                                     <label className="radio-button" htmlFor="dentistId">
@@ -480,7 +480,7 @@ export const BookDoctor = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="entId" name="specialistDoctor" value="ENT" onChange={getInput} />
                                                     <label className="radio-button" htmlFor="entId">
@@ -491,7 +491,7 @@ export const BookDoctor = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="psychiId" name="specialistDoctor" value="psychiatrist" onChange={getInput} />
                                                     <label className="radio-button" htmlFor="psychiId">
@@ -502,7 +502,7 @@ export const BookDoctor = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton'>
                                                     <input type="radio" id="nutriId" name="specialistDoctor" value="Nutritionist" onChange={getInput} />
                                                     <label className="radio-button" htmlFor="nutriId">
@@ -547,9 +547,9 @@ export const BookDoctor = () => {
                                         </h1>
                                     </div>
                                     <div className="mainBodyInner">
-                                        <div className="row wrapper ">
+                                    <div className="rowButton wrapper ">
 
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 " align="center">
+                                        <div className="columnButtons">
                                                 <div className='radioButton selectDocDiv'>
                                                     <input type="radio" id="doc1" name="bookedDoctorId" value="1" onChange={getInput} />
                                                     <label className="radio-button" htmlFor="doc1">
@@ -569,7 +569,7 @@ export const BookDoctor = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton selectDocDiv'>
                                                     <input type="radio" id="doc2" name="bookedDoctorId" value="2" onChange={getInput} />
                                                     <label className="radio-button" htmlFor="doc2">
@@ -590,7 +590,7 @@ export const BookDoctor = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton selectDocDiv'>
                                                     <input type="radio" id="doc3" name="bookedDoctorId" value="3" onChange={getInput} />
                                                     <label className="radio-button" htmlFor="doc3">
@@ -610,7 +610,7 @@ export const BookDoctor = () => {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 " align="center">
+                                            <div className="columnButtons">
                                                 <div className='radioButton selectDocDiv'>
                                                     <input type="radio" id="doc4" name="bookedDoctorId" value="4" onChange={getInput} />
                                                     <label className="radio-button" htmlFor="doc4">
@@ -665,9 +665,9 @@ export const BookDoctor = () => {
                                         </h1>
                                     </div>
                                     <div className="mainBodyInner">
-                                        <div className="row wrapper ">
+                                    <div className="rowButton wrapper ">
 
-                                            <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 " align="center">
+                                    <div className="columnButtons">
                                                 <div className='selectDateTimePicker'>
                                                     {/* <label htmlFor="selectDateId" className='selectDateTimeLabel'>Enter Date</label> */}
                                                     <DatePicker
@@ -676,20 +676,10 @@ export const BookDoctor = () => {
 
                                                         inline
                                                     />
-                                                    {/* <label htmlFor="selectTimeId" className='selectDateTimeLabel'>Pick your Time</label> */}
+                                                  
                                                     <div className='TimePickerDiv'> <TimePicker onChange={setLabTime} value={bookedTime} /></div>
                                                 </div>
                                             </div>
-                                            {/* <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 " align="center">
-                                                <div className='selectDateTime '>
-                                                    <label htmlFor="selectTimeId" className='selectDateTimeLabel'>Enter Time</label>
-                                                    <input type="time" id='selectTimeId' className='selectDateTimeInput' name='bookedTime' onChange={getInput}  /> 
-                                                 <div className='TimePickerDiv'> <TimePicker onChange={setLabTime} value={bookedTime} /></div>
-                                                </div>
-                                            </div> */}
-
-
-
                                         </div>
                                     </div>
                                 </div>
